@@ -1,0 +1,688 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Going to the next phase</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="bf1b5522-8530-4f06-9c93-518fa322fedd" class="page sans"><header><h1 class="page-title">Going to the next phase</h1><p class="page-description"></p></header><div class="page-body"><p id="879b013b-6484-4b66-8d06-72bd46f2aef6" class="">
+</p><h1 id="1d2aa3e6-5588-47c1-a707-b1a47c850686" class="">N-Level Students</h1><figure id="d265cb2a-0899-47f2-9ebf-d5b8ff7bfd57" class="image"><a href="Going%20to%20the%20next%20phase%20bf1b552285304f069c93518fa322fedd/Screenshot_2023-10-19_at_8.06.17_PM.png"><img style="width:1098px" src="Going%20to%20the%20next%20phase%20bf1b552285304f069c93518fa322fedd/Screenshot_2023-10-19_at_8.06.17_PM.png"/></a></figure><p id="ab4a2378-d780-42b6-97e0-cf40745df7ee" class="">Picture credits: <a href="https://www.moe.gov.sg/-/media/files/post-secondary/a-guide-to-post-secondary-admissions-exercises.pdf">https://www.moe.gov.sg/-/media/files/post-secondary/a-guide-to-post-secondary-admissions-exercises.pdf</a></p><p id="53e21f89-b724-4f66-a421-c48c3fe1b462" class="">
+</p><h2 id="d0dfba88-738b-4849-8507-9806eebb84f1" class="">Applications before examination</h2><table id="8b2845de-c9fc-4ec4-bb22-ee9dd69929cd" class="simple-table"><thead class="simple-table-header"><tr id="e78d3cab-c8f2-40b0-a7f4-bd4b9f7b98d1"><th id="rLom" class="simple-table-header-color simple-table-header">Type of Early admissions</th><th id="jJND" class="simple-table-header-color simple-table-header">What is this about?</th><th id="G\k:" class="simple-table-header-color simple-table-header">More information</th></tr></thead><tbody><tr id="2e686116-22bc-49b7-9a56-60094c98de77"><th id="rLom" class="simple-table-header-color simple-table-header">ITE EAE – ITE Early Admissions Exercise</th><td id="jJND" class="">ITE EAE is an aptitude-based admissions exercise that allows students to apply and receive conditional offers for admission to ITE based on their aptitude and interest, prior to receiving their final GCE N-Level examination results. It allows students to
+demonstrate their aptitudes and interests apart from academic grades, thus allowing a wider range of talents to be recognised.</td><td id="G\k:" class=""><a href="http://go.gov.sg/iteeae">go.gov.sg/iteeae</a></td></tr></tbody></table><h2 id="23510cb8-3762-41a3-afc8-598f47e736d0" class="">Applications after results</h2><table id="99e150c7-d40b-4681-9b27-6a6d50c7f6fc" class="simple-table"><thead class="simple-table-header"><tr id="da52f28e-01b3-4a37-8c2b-99e8cc954648"><th id="|zMz" class="simple-table-header-color simple-table-header">Type of Admission Exercise</th><th id="G|Nf" class="simple-table-header-color simple-table-header">What is this about?</th><th id="POKU" class="simple-table-header-color simple-table-header">More information</th></tr></thead><tbody><tr id="19743716-74f0-4801-8440-fce5eb31ba95"><th id="|zMz" class="simple-table-header-color simple-table-header">JIE &#x27;N&#x27;/JIE &#x27;E&#x27; – Joint Intake Exercise</th><td id="G|Nf" class="">The JIE &#x27;N&#x27; is for 2-year Nitec or 3-year Higher Nitec courses offered by ITE.
+The JIE &#x27;E&#x27; is for GCE N(T) students to apply for the 3-year Nitec course with Enhanced Nitec Foundation Programme.</td><td id="POKU" class=""><a href="http://go.gov.sg/applyjie">go.gov.sg/applyjie</a></td></tr><tr id="c562695f-1657-4174-afa2-03e6f5c9328d"><th id="|zMz" class="simple-table-header-color simple-table-header">PFP – Polytechnic Foundation Programme</th><td id="G|Nf" class="">PFP is a one-year programme that offers a practice-oriented curriculum taught by polytechnic lecturers to better prepare polytechnic-bound Secondary 4 N(A) students for entry into selected polytechnic diploma courses. PFP students are given provisional places in diploma programmes, subject to them
+passing all modules in the one-year programme.</td><td id="POKU" class=""><a href="http://go.gov.sg/pfp">go.gov.sg/pfp</a></td></tr><tr id="b17c60f4-1890-4e86-a563-abc545e7cc1d"><th id="|zMz" class="simple-table-header-color simple-table-header">DPP – Direct-Entry-Scheme to Polytechnic Programme</th><td id="G|Nf" class="">DPP allows Secondary 4N(A) students to be admitted directly into selected 2-year Higher Nitec programmes at ITE without having to sit for the O-Level examinations or undergo a Nitec programme. 
+DPP students who successfully complete their Higher Nitec courses at ITE and attain the
+required qualifying Grade Point Average (GPA) scores are guaranteed a place in a polytechnic diploma course mapped to their Higher Nitec course.</td><td id="POKU" class=""><a href="http://go.gov.sg/applydpp">go.gov.sg/applydpp</a></td></tr><tr id="ca6754da-88f1-41d2-8c7f-ec0a8f8701cf"><th id="|zMz" class="simple-table-header-color simple-table-header">NFP – NAFA Foundation Programme</th><td id="G|Nf" class="">NFP is a one-year practice-based programme that prepares N(A) Level holders to pursue a diploma in the creative arts. NFP students who successfully complete the programme will be oered a place in their chosen diploma course at NAFA.</td><td id="POKU" class=""><a href="http://go.gov.sg/applynafafp">go.gov.sg/applynafafp</a></td></tr></tbody></table><p id="7e327ff6-67c8-4bfe-a477-2d077f1c120c" class="">
+</p><p id="1f51d748-7e0c-40ea-8b86-48a8c4032871" class="">
+</p><h1 id="f0985d16-7519-4961-8e4e-c146aea89497" class="">O-Level Students</h1><figure id="21645169-843a-412a-9940-9124356d9887" class="image"><a href="Going%20to%20the%20next%20phase%20bf1b552285304f069c93518fa322fedd/Screenshot_2023-10-19_at_8.05.16_PM.png"><img style="width:1098px" src="Going%20to%20the%20next%20phase%20bf1b552285304f069c93518fa322fedd/Screenshot_2023-10-19_at_8.05.16_PM.png"/></a></figure><p id="a9f9a9d1-394f-4fae-ba02-005c3b251c11" class="">Picture credits: <a href="https://www.moe.gov.sg/-/media/files/post-secondary/a-guide-to-post-secondary-admissions-exercises.pdf">https://www.moe.gov.sg/-/media/files/post-secondary/a-guide-to-post-secondary-admissions-exercises.pdf</a></p><h2 id="55409404-c21f-4f1a-8402-57bfc797a801" class="">Applications before examination</h2><table id="4aaeca1d-27f3-4b9d-8502-c2146d258404" class="simple-table"><thead class="simple-table-header"><tr id="191c9612-9329-46e1-b2a4-5cbc13b1f0fc"><th id="rLom" class="simple-table-header-color simple-table-header">Type of Early admissions</th><th id="jJND" class="simple-table-header-color simple-table-header">What is this about?</th><th id="G\k:" class="simple-table-header-color simple-table-header">More information</th></tr></thead><tbody><tr id="1a5c031b-64b2-4f90-b985-bfd9a26ede93"><th id="rLom" class="simple-table-header-color simple-table-header">DSA-JC – Direct School Admission for Junior Colleges</th><td id="jJND" class="">DSA provides students with the opportunity to seek admission to JCs based on a broader range of talents and achievements</td><td id="G\k:" class=""><a href="http://go.gov.sg/applyjcdsa">go.gov.sg/applyjcdsa</a></td></tr><tr id="56dddfdf-2f03-42a0-bbe5-f7f3d0eae64f"><th id="rLom" class="simple-table-header-color simple-table-header">Polytechnic EAE – Polytechnic Early Admissions Exercise</th><td id="jJND" class="">Polytechnic EAE is an aptitude-based admissions exercise that allows students to apply for and receive conditional offers for admission to polytechnics prior to receiving their final grades. It allows students to demonstrate their aptitudes and interests apart from academic grades, thus allowing a wider range of talents to be recognised.</td><td id="G\k:" class=""><a href="http://go.gov.sg/polyeae">go.gov.sg/polyeae</a></td></tr><tr id="3a25e4b1-b670-4abc-aeb9-f3bb5a95d632"><th id="rLom" class="simple-table-header-color simple-table-header">ITE EAE – ITE Early Admissions Exercise</th><td id="jJND" class="">ITE EAE is an aptitude-based admissions exercise that allows students to apply and receive conditional oers for admission to ITE based on their aptitude and interest, prior to receiving their final O-Level examination results. It allows students to demonstrate their aptitudes and interests apart from academic grades, thus allowing a wider range of talents to be recognised.</td><td id="G\k:" class=""><a href="http://go.gov.sg/iteeae">go.gov.sg/iteeae</a></td></tr></tbody></table><h2 id="e5869e03-f026-4455-8ab2-552a234bb7d7" class="">Applications after results</h2><table id="99b5e22e-e3f7-461e-930f-46fb14230f39" class="simple-table"><thead class="simple-table-header"><tr id="4ec3b48e-4721-49fe-9a8f-d6c0fa95716e"><th id="|zMz" class="simple-table-header-color simple-table-header">Type of Admission Exercise</th><th id="G|Nf" class="simple-table-header-color simple-table-header">What is this about?</th><th id="POKU" class="simple-table-header-color simple-table-header">More information</th></tr></thead><tbody><tr id="20b00d04-306f-4c65-b99f-5cf47da5bc97"><th id="|zMz" class="simple-table-header-color simple-table-header">JAE – Joint Admissions Exercise</th><td id="G|Nf" class="">JAE enables GCE O-level holders to apply for admissions to courses offered by JCs, MI, Polytechnics and ITE 2-year Higher Nitec.</td><td id="POKU" class=""><a href="http://go.gov.sg/applyjae">go.gov.sg/applyjae</a></td></tr><tr id="24094d42-2099-4d34-8e8b-d8bb41f6039d"><th id="|zMz" class="simple-table-header-color simple-table-header">JIE &#x27;O&#x27; – Joint Intake Exercise &#x27;O’</th><td id="G|Nf" class="">The JIE &#x27;O&#x27; is conducted to enable GCE O-Level holders to apply for the 2-year Nitec or 3 year Higher Nitec courses conducted by ITE.</td><td id="POKU" class=""><a href="http://go.gov.sg/applyjie">go.gov.sg/applyjie</a></td></tr><tr id="d0368f9c-715a-4c42-808b-8d8610e04616"><th id="|zMz" class="simple-table-header-color simple-table-header">Arts Institutions – NAFA/ LASALLE</th><td id="G|Nf" class="">GCE O-Level holders with the aptitude and interest to pursue the creative arts at the tertiary level may apply for diploma programmes at the Arts Institutions (AIs).
+
+Each AI runs its own admissions exercise, and interested students should apply directly to the institution.</td><td id="POKU" class="">NAFA: <a href="http://go.gov.sg/applynafa">go.gov.sg/applynafa</a>
+LASALLE: <a href="http://go.gov.sg/applylasalle">go.gov.sg/applylasalle</a></td></tr></tbody></table></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
