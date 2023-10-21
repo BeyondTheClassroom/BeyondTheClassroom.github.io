@@ -1,0 +1,686 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>About the various Institutions</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="37a543dc-b077-4527-8db0-b0465b245787" class="page sans"><header><h1 class="page-title">About the various Institutions</h1><p class="page-description"></p></header><div class="page-body"><nav id="bd3be714-4cca-44a3-bd55-0a6ddcd5f415" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#6474bf3a-9ea6-4384-83d6-2a41585333b6">Junior Colleges</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9b89fb5b-528b-4772-86cf-384344722a82">Introduction</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#9b5b0916-de2b-4f1d-b857-3f9f6ca38b37">Here is a list of some Junior Colleges in Singapore along with their websites and cut-off points:</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#0233cc2f-ad81-4c6d-9f69-b420565bc476">Admission Requirements for Junior Colleges</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d081ed17-b812-43b8-b77d-2b25a3977b82">Course structure</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#87354ef7-5252-4d15-9513-ad7a99ed25f2">Difference between H1 and H2 Subjects</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#04227cc9-617e-46bd-846b-53cd28362d03">Academic Programs</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#d1356ca1-8c29-46a9-9dbf-1488e15c3d2e">Special subjects</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a20d5360-3f4f-4dd3-aa95-d47d3c5c1063">List of scholarships</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#29f418f6-c815-4b43-ba3a-396f42767c37">Polytechnics</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#05771ca0-0085-4238-93f2-11b9e6e12474">Introduction</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#223f3a5d-a869-49d7-a360-a83883f5e3a1">List of Polytechnics</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a6294023-db90-4688-b7d6-80d6c12ab25a">Admission requirements</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5695ce2b-6a33-43e6-bd1e-68c610032faf">List of Courses</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#58c1c44d-458f-4494-af2f-3959b897b1af">Nanyang Polytechnic</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#7a2d185b-638d-49b6-ac03-c89a32f13e2d">Ngee Ann Polytechnic</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#baae5039-7662-4a08-85a3-725e65791570">Republic Polytechnic</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#0ed90ea7-cd29-434b-8960-0d129ddcf926">Singapore Polytechnic</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#e4aeac1b-a15f-4c22-a20f-bc778779f063">Temasek Polytechnic</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#cdf3fbf5-9f3b-4c78-81a1-3afc1ab8e464">Course Structure</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#72b81c37-1f12-4ac9-a778-6cb811ad0de1">List of Scholarships</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#c5654165-a2a3-486f-abfb-bb0f408c7f9a">Institutes of Technical Education (ITE)</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#593447e3-6685-42f2-a10c-525e100f6589">Introduction</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#539b6ae1-61f3-4ad6-9f5c-c50ddec31888">List of courses</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#7cf8367f-6ea8-4668-8a06-f5230bc3bc0d">Institute of Technical Education (ITE) Central</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#0df5b188-5226-419d-92a8-0ba7e7cfa55b">Institute of Technical Education (ITE) East</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#0934a244-28b4-41ac-b8f9-a7345fb91d6f">Institute of Technical Education (ITE) West</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#fd39d0b4-f63d-43bd-84c9-808f32f878fa">Admission requirement</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e93c4e0f-5917-4351-8ab0-ec38849ec038">List of scholarships</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1cab3277-e370-417f-8d5f-c154271ed0b1">Private Schools</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1bd2a188-8464-4491-850c-d574e68647dc">Introduction</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#c3643e03-8f10-48df-b2fe-45d0cb1b330e">List of Private Schools</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#ebb3f04f-4e88-41d1-a83f-a0e0670b251e">List of courses</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#1b21dfc3-b33e-488d-810d-1c1584a7e900">Admission requirements</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9c2cea9e-3ceb-4e0a-92cc-60a2541dfda3">List of scholarships available</a></div></nav><p id="1867f6e1-6fa5-4db5-b6d7-6945801d5261" class="">
+</p><h1 id="6474bf3a-9ea6-4384-83d6-2a41585333b6" class="">Junior Colleges</h1><h2 id="9b89fb5b-528b-4772-86cf-384344722a82" class="">Introduction</h2><p id="b057448d-eccd-4948-9114-d1a1fb982a54" class="">Junior colleges are post-secondary institutions in Singapore that offer a two-year pre-university program. They provide students with a comprehensive education that prepares them for the GCE Advanced Level (A-Level) examinations, which are typically taken at the end of the two-year program.</p><p id="318180bc-18c4-4405-bdf5-cfce7c043742" class="">Junior colleges in Singapore offer a wide range of academic programs and subject combinations, including both science and arts streams. Students can choose subjects based on their interests, strengths, and future educational or career goals. The curriculum is designed to provide a strong foundation in various disciplines and develop critical thinking, problem-solving, and analytical skills.</p><p id="882499d0-4bef-44fa-9e6c-186fedeb3b22" class="">In addition to academic excellence, junior colleges also emphasize holistic development and offer a vibrant and engaging learning environment. They provide opportunities for students to participate in co-curricular activities, leadership programs, community service, and sports, fostering personal growth and character development.</p><p id="c4e0a1ef-a333-477e-9444-82d0902db0b7" class="">Junior colleges are known for their rigorous academic standards and are often regarded as a stepping stone to higher education in universities and other tertiary institutions. The education provided in junior colleges helps students gain the necessary knowledge and skills to excel in their chosen fields of study.</p><p id="87cfa70a-6a3f-4e6b-a050-23b3ae48ca3a" class="">Admission to junior colleges is competitive, and students are selected based on their GCE O-Level examination results, L1R5 or L1R4 aggregate scores, and other criteria set by each junior college. It is important for students to research and understand the admission requirements, subject prerequisites, and specific offerings of each junior college before making their choices.</p><p id="5c9c5d6f-6fd8-40dd-b932-1a6043addf39" class="">Junior colleges not only provide a solid academic foundation but also offer a supportive and nurturing learning environment where students can develop their potential and prepare for future challenges in higher education and beyond.</p><p id="7d07071d-33de-4a56-8d88-963d48f8ae6d" class="">When choosing the right Junior College in Singapore, there are several factors to consider:</p><ol type="1" id="b55463fd-aec9-427f-b36f-f7f312a187e2" class="numbered-list" start="1"><li>Academic Programs: Research and understand the academic programs offered by different Junior Colleges. Consider your interests, strengths, and career goals to find a college that offers subjects and disciplines that align with your aspirations.</li></ol><ol type="1" id="56d88442-2060-4b79-a142-dab42e3eaf0f" class="numbered-list" start="2"><li>Reputation and Ranking: Look into the reputation and ranking of the Junior Colleges. Consider factors such as academic excellence, track record of student achievements, and quality of teaching staff. This information can help you gauge the overall standard and standing of the college.</li></ol><ol type="1" id="e621d7ba-88f0-46e8-a4fc-0b274de1a343" class="numbered-list" start="3"><li>Location and Accessibility: Consider the location of the Junior College and its accessibility from your home or preferred mode of transportation. Think about factors such as commuting time and convenience.</li></ol><ol type="1" id="584673e6-1b4e-473c-973f-e0d6cb49d9ee" class="numbered-list" start="4"><li>Co-curricular Activities: Explore the range and variety of co-curricular activities offered by the Junior Colleges. Consider your interests and passion outside of academics and choose a college that provides opportunities for personal growth and development in those areas.</li></ol><ol type="1" id="67db5449-d2fd-4b10-ac3a-d7ce493352fd" class="numbered-list" start="5"><li>Support and Guidance: Look into the support systems and guidance provided by the Junior Colleges. Consider factors such as counseling services, academic support, career guidance, and mentorship programs. These resources can greatly contribute to your overall educational experience.</li></ol><ol type="1" id="a97bdc02-d7a0-4bc4-80b0-2ed2232efec7" class="numbered-list" start="6"><li>Alumni Network: Research the alumni network of the Junior Colleges. Consider the achievements and success stories of former students and how the college&#x27;s alumni network can benefit you in terms of networking, internships, and future career opportunities.</li></ol><p id="c48d4bf3-0f79-4687-a8d5-f9d66cf4dd88" class="">Remember to visit the Junior Colleges&#x27; websites, attend open houses or information sessions, and talk to current students or alumni to gather more information and insights about each institution. This will help you make an informed decision about the right Junior College for your post-secondary education journey.</p><p id="8ec8aeda-9b8d-4c84-ad8e-3bf7b2f69828" class="">
+</p><h3 id="9b5b0916-de2b-4f1d-b857-3f9f6ca38b37" class="">Here is a list of some Junior Colleges in Singapore along with their websites and cut-off points:</h3><ol type="1" id="dad04440-28d1-4f5d-be4f-90dbdd2362db" class="numbered-list" start="1"><li>Anderson Junior College (AJC) - <a href="https://www.andersonjc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 12, Science: 8</li></ol><ol type="1" id="b06b2feb-3e28-470c-998e-341cafe596c8" class="numbered-list" start="2"><li>Anglo-Chinese Junior College (ACJC) - <a href="https://acjc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 9, Science: 6</li></ol><ol type="1" id="fb9e7b9c-3105-43ca-9f9b-6ed5c6b32996" class="numbered-list" start="3"><li>Catholic Junior College (CJC) - <a href="https://cjc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 10, Science: 7</li></ol><ol type="1" id="f3ed4846-27af-422e-a7f0-6282e24be980" class="numbered-list" start="4"><li>Hwa Chong Institution (HCI) - <a href="https://www.hci.edu.sg/">Website</a> - Cut-off points: Arts: 4, Science: 3</li></ol><ol type="1" id="89291135-3aca-4a0b-9bc8-86dda3be298e" class="numbered-list" start="5"><li>Jurong Pioneer Junior College (JPJC) - <a href="https://jpjc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 13, Science: 9</li></ol><ol type="1" id="3ade8920-d1b5-402a-a062-8807b7d0ce1d" class="numbered-list" start="6"><li>Meridian Junior College (MJC) - <a href="https://mjc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 12, Science: 9</li></ol><ol type="1" id="f7b8df12-6b4c-4bbf-b49e-4e4885824938" class="numbered-list" start="7"><li>Nanyang Junior College (NYJC) - <a href="https://nyjc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 8, Science: 5</li></ol><ol type="1" id="f516b52b-e6fe-4e50-89d2-173d5601f455" class="numbered-list" start="8"><li>National Junior College (NJC) - <a href="https://www.nationaljc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 4, Science: 3</li></ol><ol type="1" id="6de15215-6beb-48a2-9b8f-cad4327fa2e4" class="numbered-list" start="9"><li>Pioneer Junior College (PJC) - <a href="https://pjc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 11, Science: 8</li></ol><ol type="1" id="c1d9f8f7-3118-4206-aef8-5745f528099c" class="numbered-list" start="10"><li>Saint Andrew&#x27;s Junior College (SAJC) - <a href="https://sajc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 10, Science: 7</li></ol><ol type="1" id="29ccac3c-5912-496b-bd5e-2f0fcf5e38ae" class="numbered-list" start="11"><li>Serangoon Junior College (SRJC) - <a href="https://srjc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 12, Science: 9</li></ol><ol type="1" id="84ffb596-982f-4ef3-8459-3fc8ef91eb33" class="numbered-list" start="12"><li>Tampines Meridian Junior College (TMJC) - <a href="https://www.tmjc.edu.sg/">Website</a> - Cut-off points: Arts: 12, Science: 9</li></ol><ol type="1" id="6b437b9c-171d-4fdc-8ddc-13e4bff6024e" class="numbered-list" start="13"><li>Temasek Junior College (TJC) - <a href="https://www.temasekjc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 8, Science: 7</li></ol><ol type="1" id="3062899f-fa70-4fcd-a8ea-cf12154adc33" class="numbered-list" start="14"><li>Victoria Junior College (VJC) - <a href="https://www.victoriajc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 6, Science: 4</li></ol><ol type="1" id="609e5224-45dd-4309-aefa-fa63ca5f6340" class="numbered-list" start="15"><li>Yishun Innova Junior College (YIJC) - <a href="https://www.yijc.moe.edu.sg/">Website</a> - Cut-off points: Arts: 13, Science: 9</li></ol><p id="af992e3c-092d-4c03-acdb-04cd61dfbf17" class="">Please note that these cut-off points are for the 2021 Joint Admissions Exercise (JAE) and may vary from year to year. It is advisable to visit the respective junior college websites for the most up-to-date information on their admission requirements and cut-off points.</p><p id="2b5126e5-4fc9-4905-b8e3-b3fec4b55473" class="">
+</p><h3 id="0233cc2f-ad81-4c6d-9f69-b420565bc476" class="">Admission Requirements for Junior Colleges</h3><p id="7f0bc88d-3ec4-4b24-b699-aa2ae2a5f9b6" class="">The admission requirements for junior colleges may vary slightly from one institution to another. Generally, the admission process involves the following:</p><ol type="1" id="11893690-a0b7-4eb1-87f5-54743b4be28c" class="numbered-list" start="1"><li>GCE O-Level Results: Junior colleges typically consider the GCE O-Level examination results as part of the admission criteria. Students are required to meet the minimum entry requirements set by each junior college, which usually include a certain number of passes in specific subjects.</li></ol><ol type="1" id="212100eb-69c1-4f0f-af94-a29c4c4f2556" class="numbered-list" start="2"><li>L1R5 or L1R4 Aggregate Score: Junior colleges may use the L1R5 or L1R4 aggregate score, which refers to the combined scores of a student&#x27;s best L1 (first language) subject and five or four relevant subjects. The specific aggregate score required for admission may vary among junior colleges.</li></ol><ol type="1" id="cb9f017f-b73b-48b4-8968-5a9b105fc747" class="numbered-list" start="3"><li>Subject Prerequisites: Some subject combinations may have specific subject prerequisites. For example, certain science or mathematics-related subject combinations may require a minimum grade in Mathematics or Science subjects.</li></ol><ol type="1" id="99572b47-0821-43fd-b394-7d4657da23f7" class="numbered-list" start="4"><li>Co-Curricular Activities (CCA): Junior colleges also consider students&#x27; involvement in co-curricular activities, leadership roles, and achievements within or outside the school. These activities demonstrate a student&#x27;s holistic development and may be taken into account during the selection process.</li></ol><ol type="1" id="4bbce861-c2c6-4007-a0e8-7eb6d1596b44" class="numbered-list" start="5"><li>Interview or Selection Test: In some cases, junior colleges may conduct an interview or selection test as part of the admission process. This is to assess a student&#x27;s suitability for the college and their potential to contribute to the JC community.</li></ol><p id="f9014be9-5afe-4e9d-89fb-eb42b7057a21" class="">It is important to note that admission to junior colleges is competitive, and meeting the minimum requirements does not guarantee a placement. It is advisable to check the specific admission requirements and criteria of each junior college you are interested in applying to. Consulting with your school counselor or academic advisor can provide further guidance on the admission process and requirements specific to your situation.</p><p id="ba8397a2-3b89-4e16-a3fe-73219779e8c6" class="">Remember to carefully review the admission information provided by the junior colleges and submit your application within the designated application period.</p><p id="c1c4ede0-f6f0-4a9b-ba9b-1157d7541017" class="">
+</p><h2 id="d081ed17-b812-43b8-b77d-2b25a3977b82" class="">Course structure</h2><h3 id="87354ef7-5252-4d15-9513-ad7a99ed25f2" class="">Difference between H1 and H2 Subjects</h3><p id="932014b0-f641-47b5-a42b-89b925fcadf3" class="">In the context of post-secondary education in Singapore, H1 and H2 refer to the different levels of subjects offered in the GCE Advanced Level (A-Level) curriculum. Here are the key differences:</p><ol type="1" id="caff6217-7770-4098-a79d-db375da9efcf" class="numbered-list" start="1"><li>Depth and Breadth: H2 subjects are considered to be more in-depth and comprehensive compared to H1 subjects. H2 subjects require students to delve deeper into the subject matter and cover a broader range of topics.</li></ol><ol type="1" id="838fb9e7-6852-4efc-9bca-ced01563794b" class="numbered-list" start="2"><li>Examination Weightage: H2 subjects carry a higher weightage in terms of the examination components compared to H1 subjects. H2 subjects typically have more papers or a higher percentage of the total examination marks allocated to them.</li></ol><ol type="1" id="15873ef0-b531-425e-937e-9b4e119dbd9a" class="numbered-list" start="3"><li>University Admission Prerequisites: Some university courses in Singapore may have specific subject prerequisites for admission. H2 subjects are often required or preferred for courses that are more closely related to the respective subject areas.</li></ol><ol type="1" id="9915aeeb-4f12-493a-8cac-3641a1eb79a5" class="numbered-list" start="4"><li>Flexibility: H1 subjects offer greater flexibility in terms of subject combinations. Students are required to take a minimum of one H1 subject but can choose to take more H2 subjects depending on their interests and academic strengths.</li></ol><p id="58c2c4d6-558c-4afa-9888-8b61a62c2bc9" class="">It is important to consider your academic interests, career goals, and university course requirements when choosing between H1 and H2 subjects. Consulting with your school counselor or academic advisor can provide further guidance in selecting the most appropriate subject combination for your post-secondary education journey.</p><p id="05fe1f6e-eb65-47aa-8726-f62842e9018a" class="">In the GCE Advanced Level (A-Level) curriculum in Singapore, students are required to take a minimum of one H1 subject and can choose to take up to a maximum of three H2 subjects. The choice of H1 and H2 subjects depends on the student&#x27;s interests, academic strengths, and future educational or career goals.</p><h3 id="04227cc9-617e-46bd-846b-53cd28362d03" class="">Academic Programs</h3><p id="c0391f7b-0d70-4e1b-b1f5-f12607949fef" class="">Junior colleges in Singapore offer a wide range of academic programs to cater to students&#x27; diverse interests and career aspirations. Some common academic programs offered by junior colleges include:</p><ol type="1" id="d2911bf5-b8d1-4ede-b921-2f380bfb2226" class="numbered-list" start="1"><li>Science Stream:<ul id="5b0de989-d2c7-4142-8623-2f58220c269c" class="bulleted-list"><li style="list-style-type:disc">Mathematics, Physics, Chemistry (MPC)</li></ul><ul id="14109c57-ec73-4bb3-9255-c298c029c20e" class="bulleted-list"><li style="list-style-type:disc">Mathematics, Physics, Biology (MPB)</li></ul><ul id="82d2d576-8165-4e1b-bee8-495ccd667ab5" class="bulleted-list"><li style="list-style-type:disc">Mathematics, Chemistry, Biology (MCB)</li></ul></li></ol><ol type="1" id="e4bda311-0512-4788-9d54-a58965062999" class="numbered-list" start="2"><li>Arts Stream:<ul id="1a1c35c6-6781-486e-80f7-19b3be725b74" class="bulleted-list"><li style="list-style-type:disc">Literature, History, Geography (LHG)</li></ul><ul id="c23b289d-8bec-4625-8bb7-e653142d1ab8" class="bulleted-list"><li style="list-style-type:disc">Literature, History, Economics (LHE)</li></ul><ul id="43a61d7e-b5ee-4994-9221-3b737b9b0689" class="bulleted-list"><li style="list-style-type:disc">History, Economics, Geography (HEG)</li></ul></li></ol><p id="96d5efba-8547-4578-a8c4-c0ec050202ff" class="">These are just a few examples, and there may be additional subject combinations available across different junior colleges. It is essential to research and explore the specific academic programs offered by each junior college to find the best fit for your interests and career goals.</p><p id="8f14dae8-36bd-4d98-bafb-7e94db0e3794" class="">Remember to review the admission requirements, prerequisites, and any additional criteria for the academic programs you are interested in. It is also advisable to consult with your school counselor or academic advisor for personalized guidance on selecting the most suitable junior college academic program for your post-secondary education journey.</p><p id="1533e006-85a4-4851-ac35-a917259c1bab" class="">
+</p><h3 id="d1356ca1-8c29-46a9-9dbf-1488e15c3d2e" class="">Special subjects</h3><p id="895817da-e6b8-44c2-a76b-4f94d73481b4" class="">Here are some subjects that are only found in certain Junior Colleges:</p><ol type="1" id="eea17cbe-4fa2-4a46-a382-144db4529cb0" class="numbered-list" start="1"><li>H3 Subjects: H3 subjects are advanced-level subjects that offer in-depth study in specific disciplines. They are typically offered to students who have demonstrated exceptional aptitude and interest in a particular area. The availability of H3 subjects may vary among Junior Colleges, and the specific subjects offered can change from year to year. Some examples of H3 subjects include:<ul id="78c2555c-90cd-43a8-a2d2-ebd8b1db5ecf" class="bulleted-list"><li style="list-style-type:disc">H3 Mathematics</li></ul><ul id="c31972be-5b6a-4767-89b3-ee72c73e4546" class="bulleted-list"><li style="list-style-type:disc">H3 Physics</li></ul><ul id="b0fc5792-ac7c-4fce-beb1-1a18935053ca" class="bulleted-list"><li style="list-style-type:disc">H3 Chemistry</li></ul><ul id="0c485743-2eb2-4191-ad7f-dd8c28bd38b0" class="bulleted-list"><li style="list-style-type:disc">H3 Biology</li></ul><ul id="5d58a987-2a44-4734-b664-dbd63aca6996" class="bulleted-list"><li style="list-style-type:disc">H3 Economics</li></ul><ul id="e5f35f1e-b224-477d-a6d6-b9bf8a2580af" class="bulleted-list"><li style="list-style-type:disc">H3 Literature in English</li></ul><ul id="e2eb1052-f31f-4592-a82f-52694912b7e8" class="bulleted-list"><li style="list-style-type:disc">H3 Art</li></ul></li></ol><ol type="1" id="b92eff75-65d0-4c44-9d25-e40d7f231d42" class="numbered-list" start="2"><li>Language Electives Programme (LEP): The Language Electives Programme allows students to study a foreign language at an advanced level. LEP subjects are offered in addition to the regular H1 and H2 subjects. The availability of LEP subjects may vary among Junior Colleges, and the specific languages offered can change from year to year. Some examples of LEP subjects include:<ul id="ff39346a-54be-4c95-9434-15a63bcb09cc" class="bulleted-list"><li style="list-style-type:disc">LEP French</li></ul><ul id="827d1566-8b40-44de-9d56-5fd74aad1f76" class="bulleted-list"><li style="list-style-type:disc">LEP German</li></ul><ul id="4a4aafc4-d049-4967-b590-b34e6a1c1b85" class="bulleted-list"><li style="list-style-type:disc">LEP Japanese</li></ul><ul id="d3fc4e33-44b3-41ac-a9b9-d8b9c9a4a6f5" class="bulleted-list"><li style="list-style-type:disc">LEP Chinese</li></ul><ul id="4b4f5540-c16c-4c1b-9b0b-92599220219a" class="bulleted-list"><li style="list-style-type:disc">LEP Malay</li></ul><ul id="42921208-6a94-4f00-be50-a57ac51a7751" class="bulleted-list"><li style="list-style-type:disc">LEP Spanish</li></ul></li></ol><p id="17aaa9d5-b006-4e53-ba6f-4dcf545b36e5" class="">Please note that the availability of H3 subjects and LEP subjects may vary among Junior Colleges. It is advisable to check the respective Junior College websites or contact the schools directly for the most up-to-date information on the special subjects they offer.</p><h2 id="a20d5360-3f4f-4dd3-aa95-d47d3c5c1063" class="">List of scholarships</h2><p id="ed5765e7-1e15-45f2-bffe-b7c12638c7ec" class="">Here is a list of scholarships available for Junior College (JC) students in Singapore:</p><ol type="1" id="8845e49e-b156-4393-a1b9-dddf905f399a" class="numbered-list" start="1"><li>MOE Pre-University Scholarship: This scholarship is awarded to outstanding JC students who demonstrate strong academic potential and leadership qualities. It covers tuition fees, a monthly allowance, and other benefits. Visit the <a href="https://www.moe.gov.sg/admissions/scholarships/pre-university/pre-u-scholarship">MOE website</a> for more information.</li></ol><ol type="1" id="cbbe7aea-e495-4bc0-a58b-f291dd0c0ae8" class="numbered-list" start="2"><li>EESIS Scholarship: The Economic Expansion Incentive Scheme (EEIS) Scholarship is offered to JC students who excel academically and have a keen interest in economics. It provides financial support and mentorship opportunities. Visit the <a href="https://www.eesis.org.sg/">EESIS website</a> for more details.</li></ol><ol type="1" id="e70c1069-fd9d-43ce-95c3-675eb9e7137d" class="numbered-list" start="3"><li>Community Development Council (CDC) Scholarships: Various CDCs in Singapore offer scholarships to JC students who have demonstrated academic excellence and made significant contributions to their communities. Contact your respective CDC or visit their websites for more information.</li></ol><ol type="1" id="1c557903-f906-44a8-8ae7-724495847095" class="numbered-list" start="4"><li>Subject-Specific Scholarships: Some organizations and institutions offer scholarships specifically for students excelling in certain subjects, such as mathematics, science, or the arts. Research and explore subject-specific scholarship opportunities that align with your interests and strengths.</li></ol><ol type="1" id="08be54b2-25a7-4472-b874-575cb929d1e1" class="numbered-list" start="5"><li>Company-Sponsored Scholarships: Many companies in Singapore offer scholarships to JC students as part of their corporate social responsibility initiatives. These scholarships often come with internship or job attachment opportunities. Research and reach out to companies in your field of interest to inquire about available scholarships.</li></ol><p id="268a9a79-48aa-4bd8-a70d-d1c0dc3d5595" class="">It is essential to note that scholarship eligibility criteria, application processes, and deadlines may vary for each scholarship. Take the time to research and understand the requirements and application procedures for each scholarship you are interested in. Consult your school counselor or academic advisor for further guidance and support in applying for scholarships.</p><p id="609eec74-eefc-4d37-9d3f-f4574b119655" class="">Remember to check the respective scholarship websites or contact the scholarship providers directly for the most up-to-date information and application details.</p><p id="c9c6c844-9116-49b8-96a1-f9357983c9b8" class="">Good luck in your scholarship search!</p><h1 id="29f418f6-c815-4b43-ba3a-396f42767c37" class="">Polytechnics</h1><h2 id="05771ca0-0085-4238-93f2-11b9e6e12474" class="">Introduction</h2><p id="3853343b-5034-4643-bcbf-8fe91dcd5707" class="">Polytechnics are post-secondary institutions that offer a wide range of diploma programs in various fields of study. They provide hands-on learning experiences and practical skills training to prepare students for specific careers or further education.</p><p id="77ae8c5f-c6b5-4d20-9d60-adeac97efe36" class="">Polytechnic education in Singapore focuses on applied learning and equips students with industry-relevant skills and knowledge. The curriculum typically combines classroom learning with real-world projects, internships, and industry attachments.</p><p id="2dbec34c-0e0e-40fc-878e-ad61e1ca0240" class="">Polytechnics offer diploma programs in areas such as engineering, business, design, media, health sciences, hospitality, and many more. These programs are designed to meet the demands of the job market and provide students with the necessary skills and qualifications for entry-level positions in their chosen fields.</p><p id="ab3e459e-5be5-4fd1-bd30-1c8c093e46ac" class="">Polytechnic education also emphasizes the development of soft skills, teamwork, and critical thinking abilities. Students are encouraged to participate in co-curricular activities, projects, and competitions to enhance their overall learning experience and personal development.</p><p id="1d8ad304-ef37-4b91-a6ba-dd0977b922fe" class="">Upon completion of a polytechnic diploma, students can choose to enter the workforce or pursue further education at a university or other higher education institutions. Polytechnic graduates may be eligible for advanced standing or exemptions in relevant degree programs, depending on the articulation agreements between polytechnics and universities.</p><p id="7792ea8b-8f76-43cf-b9ea-18ce17084bb9" class="">Overall, polytechnics play a vital role in providing practical and industry-focused education, bridging the gap between secondary education and the workforce, and preparing students for successful careers in various fields.</p><h2 id="223f3a5d-a869-49d7-a360-a83883f5e3a1" class="">List of Polytechnics</h2><p id="6ec85b15-7f3d-4293-91ad-af1ad538ec67" class="">Here is a list of polytechnics in Singapore along with their websites:</p><ol type="1" id="2152b70e-09c5-4f89-b2a7-0c4b0eb99509" class="numbered-list" start="1"><li>Nanyang Polytechnic - <a href="https://www.nyp.edu.sg/">Website</a></li></ol><ol type="1" id="a087b411-2827-402e-8e5f-60118127769f" class="numbered-list" start="2"><li>Ngee Ann Polytechnic - <a href="https://www.np.edu.sg/">Website</a></li></ol><ol type="1" id="1b28bd37-a602-4209-a68e-ca9658718167" class="numbered-list" start="3"><li>Republic Polytechnic - <a href="https://www.rp.edu.sg/">Website</a></li></ol><ol type="1" id="36ced0e7-6181-4fe8-8785-e0c280c04307" class="numbered-list" start="4"><li>Singapore Polytechnic - <a href="https://www.sp.edu.sg/">Website</a></li></ol><ol type="1" id="0f6e4760-d48d-46ae-b421-ada5d1d7188d" class="numbered-list" start="5"><li>Temasek Polytechnic - <a href="https://www.tp.edu.sg/">Website</a></li></ol><h2 id="a6294023-db90-4688-b7d6-80d6c12ab25a" class="">Admission requirements</h2><p id="72912ea3-1336-48fe-b8df-6f766f14a60b" class="">Admission requirements for polytechnics in Singapore typically include the following:</p><ol type="1" id="f2e5d16e-6321-4b8b-8b60-31b4d54d84d1" class="numbered-list" start="1"><li>GCE O-Level Results: Polytechnics consider the GCE O-Level examination results for admission. Students are required to meet the minimum entry requirements set by each polytechnic, which usually include a certain number of passes in specific subjects.</li></ol><ol type="1" id="96736193-8d02-456d-a68f-93a8e145f05f" class="numbered-list" start="2"><li>L1R4 or L1R5 Aggregate Score: Polytechnics may use the L1R4 or L1R5 aggregate score, which refers to the combined scores of a student&#x27;s best L1 (first language) subject and four or five relevant subjects. The specific aggregate score required for admission may vary among polytechnics.</li></ol><ol type="1" id="4e986df3-bdaa-4f48-b66b-e2826a3b5f25" class="numbered-list" start="3"><li>Subject Prerequisites: Some diploma programs may have specific subject prerequisites. For example, certain engineering or science-related diploma programs may require a minimum grade in Mathematics or Science subjects.</li></ol><ol type="1" id="770e2869-39bd-42a0-bed2-a58ea49ddead" class="numbered-list" start="4"><li>Co-Curricular Activities (CCA): Polytechnics also consider students&#x27; involvement in co-curricular activities, leadership roles, and achievements within or outside the school. These activities demonstrate a student&#x27;s holistic development and may be taken into account during the selection process.</li></ol><ol type="1" id="a442f17a-f2f4-4f68-94b4-fc2aa903f5c6" class="numbered-list" start="5"><li>Interview or Selection Test: In some cases, polytechnics may conduct an interview or selection test as part of the admission process. This is to assess a student&#x27;s suitability for the diploma program and their potential to contribute to the polytechnic community.</li></ol><p id="dd94ec0d-eb1f-430a-86f9-d2d1b203b581" class="">It is important to note that admission to polytechnics is competitive, and meeting the minimum requirements does not guarantee a placement. It is advisable to check the specific admission requirements and criteria of each polytechnic you are interested in applying to. Consulting with your school counselor or academic advisor can provide further guidance on the admission process and requirements specific to your situation.</p><p id="3a88a814-22b8-4ca7-807b-544c006bca24" class="">Remember to carefully review the admission information provided by the polytechnics and submit your application within the designated application period.</p><h2 id="5695ce2b-6a33-43e6-bd1e-68c610032faf" class="">List of Courses</h2><h3 id="58c1c44d-458f-4494-af2f-3959b897b1af" class="">Nanyang Polytechnic</h3><ul id="82cb62a1-b9ba-4eba-9b0b-d8ccd2243f60" class="bulleted-list"><li style="list-style-type:disc">School of Business Management<ul id="2758ac09-c780-4f29-b813-f77a688af7ab" class="bulleted-list"><li style="list-style-type:circle">Diploma in Accountancy</li></ul><ul id="53633cb3-8150-4eb3-bbe3-3584bb6e0a8e" class="bulleted-list"><li style="list-style-type:circle">Diploma in Business Management</li></ul><ul id="852c21a3-0ab6-4d95-88db-dd9ee2c4c6ab" class="bulleted-list"><li style="list-style-type:circle">Diploma in Financial Informatics</li></ul><ul id="e9e6d24b-7646-4b33-8d02-aed106b956ce" class="bulleted-list"><li style="list-style-type:circle">Diploma in Marketing</li></ul></li></ul><ul id="8234c593-8068-465c-8f1b-f7b75859f01a" class="bulleted-list"><li style="list-style-type:disc">School of Engineering<ul id="2e411833-897c-4cc3-a1ee-d8ec7b893bad" class="bulleted-list"><li style="list-style-type:circle">Diploma in Aerospace Engineering</li></ul><ul id="18ab9650-458f-4c61-bde7-5f1d54537cec" class="bulleted-list"><li style="list-style-type:circle">Diploma in Automation &amp; Mechatronic Systems</li></ul><ul id="2e3c2dfe-6289-4ae6-9294-51d42c82b6e9" class="bulleted-list"><li style="list-style-type:circle">Diploma in Clean Energy</li></ul><ul id="8fa905a5-0898-4a64-af2a-74116a47f091" class="bulleted-list"><li style="list-style-type:circle">Diploma in Electronics &amp; Communication Engineering</li></ul></li></ul><ul id="17a0df5c-2a8a-448a-be6a-11475b0f2f18" class="bulleted-list"><li style="list-style-type:disc">School of Health &amp; Social Sciences<ul id="f12cd21f-ada6-4751-9ce9-624fb09b4414" class="bulleted-list"><li style="list-style-type:circle">Diploma in Nursing</li></ul><ul id="5ba69e5d-0161-40de-bc3f-1bcba2623e70" class="bulleted-list"><li style="list-style-type:circle">Diploma in Occupational Therapy</li></ul><ul id="fa31eabf-554a-41ee-86b2-7c2880e6c6fe" class="bulleted-list"><li style="list-style-type:circle">Diploma in Social Sciences in Gerontology</li></ul><ul id="3b6a26e0-9902-46de-85ce-5029e0ff0a9e" class="bulleted-list"><li style="list-style-type:circle">Diploma in Sport &amp; Wellness Management</li></ul></li></ul><ul id="51497cb5-2d5e-455c-84d8-59d937db20cf" class="bulleted-list"><li style="list-style-type:disc">School of Information Technology<ul id="98dbb49f-e68e-47eb-83ae-451e221fb7e0" class="bulleted-list"><li style="list-style-type:circle">Diploma in Cybersecurity &amp; Digital Forensics</li></ul><ul id="6599bb51-1c4c-42da-9093-87b97ddf7d6a" class="bulleted-list"><li style="list-style-type:circle">Diploma in Digital Game Art &amp; Design</li></ul><ul id="ec359097-49c1-49ca-9bac-87694f86e75a" class="bulleted-list"><li style="list-style-type:circle">Diploma in Information Technology</li></ul><ul id="eeebfa6c-de11-4904-8781-e59940ee552c" class="bulleted-list"><li style="list-style-type:circle">Diploma in Mobile Software Development</li></ul></li></ul><ul id="36ed0034-cf25-4e02-ac05-cc8ef98346c0" class="bulleted-list"><li style="list-style-type:disc">School of Interactive &amp; Digital Media<ul id="e2cbf2a8-e989-4bf1-9789-c00bb8cc70ee" class="bulleted-list"><li style="list-style-type:circle">Diploma in Animation</li></ul><ul id="2b6f8287-ab81-4a24-b7dc-74e83ab7ea90" class="bulleted-list"><li style="list-style-type:circle">Diploma in Digital Visual Effects</li></ul><ul id="3ccddb85-2d8f-41f6-ba15-2c30654cd69c" class="bulleted-list"><li style="list-style-type:circle">Diploma in Interactive Media Design</li></ul><ul id="100482b2-c401-4116-85a7-d83e9a1471b2" class="bulleted-list"><li style="list-style-type:circle">Diploma in Motion Graphics &amp; Broadcast Design</li></ul></li></ul><h3 id="7a2d185b-638d-49b6-ac03-c89a32f13e2d" class="">Ngee Ann Polytechnic</h3><ul id="4981eac7-52a7-45fd-90b1-380d534c6b94" class="bulleted-list"><li style="list-style-type:disc">School of Business &amp; Accountancy<ul id="1aae101c-116e-4e22-b7df-e87f52f03a28" class="bulleted-list"><li style="list-style-type:circle">Diploma in Accountancy &amp; Finance</li></ul><ul id="1a8c0788-33e9-4f77-b6a6-89ceee1ec121" class="bulleted-list"><li style="list-style-type:circle">Diploma in Business &amp; Social Enterprise</li></ul><ul id="f247dff0-a243-4b47-b78b-052c4bcf8269" class="bulleted-list"><li style="list-style-type:circle">Diploma in Financial Informatics</li></ul><ul id="bea5223b-319f-43f0-bf45-a7eca0f5069c" class="bulleted-list"><li style="list-style-type:circle">Diploma in Marketing</li></ul></li></ul><ul id="4f689cb9-3355-437a-b0a6-741611c04981" class="bulleted-list"><li style="list-style-type:disc">School of Engineering<ul id="1fee7c8d-495d-4482-81ba-70be372fa537" class="bulleted-list"><li style="list-style-type:circle">Diploma in Aerospace Engineering</li></ul><ul id="f081a57e-622e-41d0-980e-254d9ebec737" class="bulleted-list"><li style="list-style-type:circle">Diploma in Biomedical Engineering</li></ul><ul id="38960cc9-26f2-4e0c-a200-4dbd26221110" class="bulleted-list"><li style="list-style-type:circle">Diploma in Clean Energy</li></ul><ul id="74322d19-196d-4303-bc26-899d8bf7bccb" class="bulleted-list"><li style="list-style-type:circle">Diploma in Electrical Engineering</li></ul></li></ul><ul id="fd6c92bc-ef94-431d-80eb-29960ae6a67d" class="bulleted-list"><li style="list-style-type:disc">School of Health Sciences<ul id="7cb8a798-2364-4a8d-8008-2167b516d258" class="bulleted-list"><li style="list-style-type:circle">Diploma in Health Management &amp; Promotion</li></ul><ul id="9b1a28cb-9a0e-4002-8b91-5a2b98f3325c" class="bulleted-list"><li style="list-style-type:circle">Diploma in Nursing</li></ul><ul id="926b2057-1dc5-4a7f-adf6-e56bd4041434" class="bulleted-list"><li style="list-style-type:circle">Diploma in Occupational Therapy</li></ul><ul id="ede0f5ef-768a-4a46-a3f6-31ee051a4fca" class="bulleted-list"><li style="list-style-type:circle">Diploma in Sports Science &amp; Management</li></ul></li></ul><ul id="e2fe094b-f34c-48db-b594-da5613c7aec5" class="bulleted-list"><li style="list-style-type:disc">School of InfoComm Technology<ul id="c3faac14-c93f-4f25-86d8-abbc3cd9d1f8" class="bulleted-list"><li style="list-style-type:circle">Diploma in Business Intelligence &amp; Analytics</li></ul><ul id="8662099f-007c-4ad8-bd3a-fff19b2cca68" class="bulleted-list"><li style="list-style-type:circle">Diploma in Cybersecurity &amp; Digital Forensics</li></ul><ul id="15f917c7-337a-46da-8ea4-ffe5d1425f4f" class="bulleted-list"><li style="list-style-type:circle">Diploma in Digital &amp; Precision Engineering</li></ul><ul id="5cf8673b-dcc4-4710-bfbb-f84b06f9d04d" class="bulleted-list"><li style="list-style-type:circle">Diploma in Mobile &amp; Network Services</li></ul></li></ul><ul id="8b3c4fad-9d71-4456-8501-8938a0793120" class="bulleted-list"><li style="list-style-type:disc">School of Interactive &amp; Digital Media<ul id="f2d6e901-5329-4170-a25b-f8dc814f043f" class="bulleted-list"><li style="list-style-type:circle">Diploma in Animation</li></ul><ul id="8db06a0c-6825-466a-bb80-abf394eb71d9" class="bulleted-list"><li style="list-style-type:circle">Diploma in Game Development &amp; Technology</li></ul><ul id="0d2d935e-cbe1-4839-9541-7e63ad8215c8" class="bulleted-list"><li style="list-style-type:circle">Diploma in Motion Graphics Design</li></ul><ul id="f0e16d7e-e715-4ece-9223-181ecb0f35d0" class="bulleted-list"><li style="list-style-type:circle">Diploma in User Experience &amp; Test Design</li></ul></li></ul><h3 id="baae5039-7662-4a08-85a3-725e65791570" class="">Republic Polytechnic</h3><ul id="40acceb3-d948-428b-8909-f4671770396a" class="bulleted-list"><li style="list-style-type:disc">School of Applied Science<ul id="153d59ae-0a7d-4344-ab45-c6a5479f4e2c" class="bulleted-list"><li style="list-style-type:circle">Diploma in Biomedical Science</li></ul><ul id="0d7060df-a8ba-4958-8165-ceec3618ca4e" class="bulleted-list"><li style="list-style-type:circle">Diploma in Environmental Science</li></ul><ul id="99bcbbe0-703c-4cc0-9701-579f53c5e8cb" class="bulleted-list"><li style="list-style-type:circle">Diploma in Pharmaceutical Science</li></ul><ul id="e11c3bf4-8bd2-45c9-a6ef-b49a5e3ba71a" class="bulleted-list"><li style="list-style-type:circle">Diploma in Veterinary Bioscience</li></ul></li></ul><ul id="e11bbd07-dd6d-4f22-baf6-d4f29a17a74f" class="bulleted-list"><li style="list-style-type:disc">School of Engineering<ul id="b2967724-eae1-492f-b1cd-5e8898bce55c" class="bulleted-list"><li style="list-style-type:circle">Diploma in Aerospace Engineering</li></ul><ul id="d54b131f-1efb-4a5c-acd5-c17bf577fd42" class="bulleted-list"><li style="list-style-type:circle">Diploma in Clean Energy Management</li></ul><ul id="be6d0490-c7ec-408b-9511-41937a9a095d" class="bulleted-list"><li style="list-style-type:circle">Diploma in Engineering Systems &amp; Management</li></ul><ul id="4e0a4f42-a8f1-488e-9c6d-a49c76abf365" class="bulleted-list"><li style="list-style-type:circle">Diploma in Infocomm Security Management</li></ul></li></ul><ul id="29c2c8d0-826b-46c7-8dab-63eb4351ab73" class="bulleted-list"><li style="list-style-type:disc">School of Infocomm<ul id="678161f9-341a-42f6-8681-c3d4c746553f" class="bulleted-list"><li style="list-style-type:circle">Diploma in Business Applications</li></ul><ul id="f78e4627-cdcc-400f-bff5-adc84c89795e" class="bulleted-list"><li style="list-style-type:circle">Diploma in Cybersecurity &amp; Forensics</li></ul><ul id="11824678-64af-4abd-b999-5b1c59ff7261" class="bulleted-list"><li style="list-style-type:circle">Diploma in Infocomm &amp; Security</li></ul><ul id="2984d4fe-8eff-4229-a394-8f4db0ec42c3" class="bulleted-list"><li style="list-style-type:circle">Diploma in Interactive &amp; Digital Media</li></ul></li></ul><ul id="f22b33b5-614a-4e8d-a645-f0b1865c37b7" class="bulleted-list"><li style="list-style-type:disc">School of Management &amp; Communication<ul id="7c07433a-eb63-4e19-b568-62ac346b318e" class="bulleted-list"><li style="list-style-type:circle">Diploma in Customer Relationship &amp; Service Management</li></ul><ul id="c7d70483-5e84-4e64-9ef7-ec744e2f7b18" class="bulleted-list"><li style="list-style-type:circle">Diploma in Mass Communication</li></ul><ul id="8928335e-9e7a-4bc5-8fb8-b9b897deeee3" class="bulleted-list"><li style="list-style-type:circle">Diploma in Supply Chain Management</li></ul><ul id="6fa5662c-c178-4914-907c-cb0a32993553" class="bulleted-list"><li style="list-style-type:circle">Diploma in Tourism &amp; Resort Management</li></ul></li></ul><ul id="8b42c304-7dc5-44c9-914d-cd6c6affa923" class="bulleted-list"><li style="list-style-type:disc">School of Technology for the Arts<ul id="7b61edc4-41ba-45a9-beca-6ebb4fa43a2e" class="bulleted-list"><li style="list-style-type:circle">Diploma in Game Design</li></ul><ul id="bcffd6e6-fa20-4675-a99b-02a6be551115" class="bulleted-list"><li style="list-style-type:circle">Diploma in New Media</li></ul><ul id="7b310bd8-547b-4146-bbe7-744bff01fa6f" class="bulleted-list"><li style="list-style-type:circle">Diploma in Sonic Arts</li></ul><ul id="b7274ec0-e02c-4359-a6b6-87ff14618e9a" class="bulleted-list"><li style="list-style-type:circle">Diploma in Theatre Production</li></ul></li></ul><h3 id="0ed90ea7-cd29-434b-8960-0d129ddcf926" class="">Singapore Polytechnic</h3><ul id="22fc5f93-30fb-40d0-bac2-e178ce517cf7" class="bulleted-list"><li style="list-style-type:disc">School of Architecture &amp; the Built Environment<ul id="531d2252-fe72-4ab6-a38c-daf5e6d60bf4" class="bulleted-list"><li style="list-style-type:circle">Diploma in Architecture</li></ul><ul id="617c5ddd-7585-4745-aa61-d3971865445e" class="bulleted-list"><li style="list-style-type:circle">Diploma in Civil Engineering with Business</li></ul><ul id="8a1e44b9-c1f2-49f4-98d6-1e1479ba980e" class="bulleted-list"><li style="list-style-type:circle">Diploma in Landscape Architecture</li></ul><ul id="087d2662-2f0e-4837-b632-a0ddf168434b" class="bulleted-list"><li style="list-style-type:circle">Diploma in Real Estate Business</li></ul></li></ul><ul id="90161fac-f826-459f-b477-e4479e28e616" class="bulleted-list"><li style="list-style-type:disc">School of Business<ul id="f5395ab8-4dde-4810-8c2a-0ff3a65fe085" class="bulleted-list"><li style="list-style-type:circle">Diploma in Accountancy</li></ul><ul id="523b5173-88b7-4dc0-81c2-1a2cf83577de" class="bulleted-list"><li style="list-style-type:circle">Diploma in Business Administration</li></ul><ul id="69c002ca-4476-4860-834a-c381cd183fae" class="bulleted-list"><li style="list-style-type:circle">Diploma in Financial Informatics</li></ul><ul id="824128ad-a436-4489-a23f-e08f52c6de97" class="bulleted-list"><li style="list-style-type:circle">Diploma in International Business</li></ul></li></ul><ul id="80ea99a6-1011-45d8-8041-f16756ff09e2" class="bulleted-list"><li style="list-style-type:disc">School of Chemical &amp; Life Sciences<ul id="6dc2ae1d-d2de-4df8-a84f-22668c625280" class="bulleted-list"><li style="list-style-type:circle">Diploma in Applied Chemistry</li></ul><ul id="b13a8dde-d546-4c91-b98b-b2134730bd2f" class="bulleted-list"><li style="list-style-type:circle">Diploma in Biomedical Science</li></ul><ul id="df86ad97-463b-4c39-bbac-e3bdee0de2fd" class="bulleted-list"><li style="list-style-type:circle">Diploma in Food Science &amp; Technology</li></ul><ul id="8c686eda-9350-4c43-8711-4d6882406430" class="bulleted-list"><li style="list-style-type:circle">Diploma in Nutrition, Health &amp; Wellness</li></ul></li></ul><ul id="0bf699fe-ffdd-419b-88cf-70b4bf05be27" class="bulleted-list"><li style="list-style-type:disc">School of Computing<ul id="2f2015f0-9773-4165-a172-ba6f05c3a7b8" class="bulleted-list"><li style="list-style-type:circle">Diploma in Business Information Technology</li></ul><ul id="a2f0c5d2-b619-4991-9ae0-e392b8b152d9" class="bulleted-list"><li style="list-style-type:circle">Diploma in Cybersecurity &amp; Digital Forensics</li></ul><ul id="d945725e-7d81-4d7c-9cce-daddc9d96765" class="bulleted-list"><li style="list-style-type:circle">Diploma in Game Development &amp; Technology</li></ul><ul id="2e41b289-fb5c-4b71-9f8a-4b1d1945a72a" class="bulleted-list"><li style="list-style-type:circle">Diploma in Infocomm Security Management</li></ul></li></ul><ul id="f3a12c40-7721-4caf-915e-fd4c66449416" class="bulleted-list"><li style="list-style-type:disc">School of Design<ul id="921e8ee9-2f56-48f4-a7d1-ba179d2ad5d2" class="bulleted-list"><li style="list-style-type:circle">Diploma in Experience &amp; Product Design</li></ul><ul id="d69eb956-87ee-46db-bdb4-bab1a94d44e0" class="bulleted-list"><li style="list-style-type:circle">Diploma in Interior Design</li></ul><ul id="8630c231-4aeb-4e62-986b-de39a987a910" class="bulleted-list"><li style="list-style-type:circle">Diploma in Media &amp; Communication Design</li></ul><ul id="59978c95-2fda-4318-b96d-60f19542938d" class="bulleted-list"><li style="list-style-type:circle">Diploma in Visual Communication</li></ul></li></ul><h3 id="e4aeac1b-a15f-4c22-a20f-bc778779f063" class="">Temasek Polytechnic</h3><ul id="264ae6dc-1271-4e2b-bced-579785a88832" class="bulleted-list"><li style="list-style-type:disc">School of Applied Science<ul id="d5b494fa-ecc3-4316-98a7-25759dd7ca11" class="bulleted-list"><li style="list-style-type:circle">Diploma in Biomedical Science</li></ul><ul id="627555dc-6b53-445d-be2b-4230306ea63f" class="bulleted-list"><li style="list-style-type:circle">Diploma in Chemical Engineering</li></ul><ul id="7b0602f6-6401-464f-9f3f-42aa0be98272" class="bulleted-list"><li style="list-style-type:circle">Diploma in Environmental Management &amp; Water Technology</li></ul><ul id="fda96ead-e1fe-4452-93c6-73c29846f17b" class="bulleted-list"><li style="list-style-type:circle">Diploma in Pharmaceutical Science</li></ul></li></ul><ul id="3e8b7c1b-d9e9-4e9e-bd6a-4de3e36ecd41" class="bulleted-list"><li style="list-style-type:disc">School of Business<ul id="bf81a3b0-a1d5-4480-9b54-b02c0027d627" class="bulleted-list"><li style="list-style-type:circle">Diploma in Business Process &amp; Systems Engineering</li></ul><ul id="f5ff4611-9e64-4e6c-98b2-e5ed9d74a18e" class="bulleted-list"><li style="list-style-type:circle">Diploma in Business</li></ul><ul id="4359a88a-3fbd-4610-8456-bb8dfd2cfdbb" class="bulleted-list"><li style="list-style-type:circle">Diploma in Financial Business Informatics</li></ul><ul id="ff6669f2-e904-46fc-8ca5-d0fe22d6389c" class="bulleted-list"><li style="list-style-type:circle">Diploma in Integrated Facility Management</li></ul></li></ul><ul id="cf2e16b4-61ec-4d2c-9b73-5b22813e4706" class="bulleted-list"><li style="list-style-type:disc">School of Design<ul id="bff7dbac-c449-42d2-a5b2-f9d3e40cc4c5" class="bulleted-list"><li style="list-style-type:circle">Diploma in Apparel Design &amp; Merchandising</li></ul><ul id="6c2f68ce-8d73-4e06-9166-73682d561996" class="bulleted-list"><li style="list-style-type:circle">Diploma in Communication Design</li></ul><ul id="11ee7052-818d-4231-bbdf-cfda3ed033f5" class="bulleted-list"><li style="list-style-type:circle">Diploma in Industrial Design</li></ul><ul id="f446b6ea-5058-4c4d-b746-ef5c357046e6" class="bulleted-list"><li style="list-style-type:circle">Diploma in Interior Architecture &amp; Design</li></ul></li></ul><ul id="52118c7d-90f8-4247-a37f-8a8bc787e3e9" class="bulleted-list"><li style="list-style-type:disc">School of Engineering<ul id="73ccf2da-6b56-437f-b832-7101581799ca" class="bulleted-list"><li style="list-style-type:circle">Diploma in Aerospace Electronics</li></ul><ul id="6254b8c2-0f9b-48a8-ac45-b465dfab711e" class="bulleted-list"><li style="list-style-type:circle">Diploma in Aerospace Engineering</li></ul><ul id="85033959-08d3-4d9e-a2d2-f104d4f5fed9" class="bulleted-list"><li style="list-style-type:circle">Diploma in Clean Energy</li></ul><ul id="8f4be5f2-2803-448e-b8dc-8d79d6bb527b" class="bulleted-list"><li style="list-style-type:circle">Diploma in Electronics &amp; Communication Engineering</li></ul></li></ul><ul id="095568a4-1cf5-436c-860f-503e64c35b5b" class="bulleted-list"><li style="list-style-type:disc">School of Informatics &amp; IT<ul id="6a6040fd-f3d1-4007-b98a-fc809bdc6033" class="bulleted-list"><li style="list-style-type:circle">Diploma in Cyber &amp; Digital Security</li></ul><ul id="ed98e2d3-9d13-4f78-b15f-56bed4dedbc5" class="bulleted-list"><li style="list-style-type:circle">Diploma in Financial Business Informatics</li></ul><ul id="fdfccb9c-02cb-4263-8c23-582337fe9ded" class="bulleted-list"><li style="list-style-type:circle">Diploma in Game Design &amp; Development</li></ul><ul id="f2e82319-31a7-47f9-8864-8274f0588ae9" class="bulleted-list"><li style="list-style-type:circle">Diploma in Mobile &amp; Network Services</li></ul></li></ul><p id="86d9f879-7009-4762-960f-213a7a3eb338" class="">Remember that this is not an exhaustive list, and there may be additional diploma programs available in each polytechnic. It is advisable to visit the respective polytechnic websites for the most up-to-date information on their academic programs and course offerings.</p><h2 id="cdf3fbf5-9f3b-4c78-81a1-3afc1ab8e464" class="">Course Structure</h2><p id="29050090-841a-485c-923d-dcfd789b4c91" class="">The course structure in each polytechnic may vary, but generally, diploma programs in polytechnics consist of academic modules, practical training, projects, and internships. Here is an overview of the typical course structure:</p><ol type="1" id="b1450313-b6f3-41d9-867d-8a4e5fc3f2ae" class="numbered-list" start="1"><li>Academic Modules: Diploma programs are structured around academic modules that cover a wide range of subjects related to the specific field of study. These modules provide theoretical knowledge and foundational skills necessary for the chosen career path.</li></ol><ol type="1" id="9b41e547-efc5-4890-9392-f55aaae78b60" class="numbered-list" start="2"><li>Practical Training: Polytechnics emphasize practical learning and hands-on experiences. Practical training includes laboratory sessions, workshops, simulations, and industry projects. Students have the opportunity to apply their theoretical knowledge in real-world scenarios and develop practical skills relevant to their chosen field.</li></ol><ol type="1" id="6ad3de41-a97e-487d-ad81-c9766ee8ab9d" class="numbered-list" start="3"><li>Projects: Students are often required to complete individual or group projects as part of their coursework. These projects allow students to explore specific topics, conduct research, and apply problem-solving skills. Projects can be industry-focused or research-oriented, depending on the program and specialization.</li></ol><ol type="1" id="7c823d2f-43c2-44bd-aab3-11c2697be152" class="numbered-list" start="4"><li>Internships: Many polytechnic programs incorporate internships or work attachments to provide students with industry exposure and practical work experience. Internships allow students to apply their skills in a professional setting, gain insights into the industry, and build valuable networks.</li></ol><ol type="1" id="e26942a1-6bb1-412a-b8bd-e8d8b583cfad" class="numbered-list" start="5"><li>Elective Modules: Some diploma programs offer elective modules, allowing students to specialize in specific areas of interest within their field of study. Elective modules provide an opportunity for students to tailor their education based on their career aspirations and personal interests.</li></ol><ol type="1" id="097686d4-1b8d-4632-bf94-ac2f0f72f9fb" class="numbered-list" start="6"><li>Capstone Projects: Towards the end of the program, students may be required to complete a capstone project that integrates the knowledge and skills acquired throughout their course of study. Capstone projects are often culminating experiences that demonstrate students&#x27; mastery of the subject matter and their ability to work independently.</li></ol><p id="c20f88ef-428c-46a7-86c4-a47fcaf4cb98" class="">It is important to note that the course structure may vary depending on the specific diploma program and polytechnic. It is advisable to visit the respective polytechnic websites or consult their course brochures for detailed information on the course structure of the programs you are interested in.</p><p id="c95f72df-98fa-4ce9-957f-f81b48aabaa4" class="">Remember to review the specific curriculum requirements and modules of the diploma program you intend to pursue in each polytechnic to gain a comprehensive understanding of the course structure and the knowledge and skills you will acquire during your studies.</p><p id="273cd696-4bf6-49b3-a571-dd293895a762" class="">
+</p><h2 id="72b81c37-1f12-4ac9-a778-6cb811ad0de1" class="">List of Scholarships</h2><p id="86323834-a120-4484-b8f2-0dc44510f91e" class="">Here is a list of scholarships available for polytechnic students in Singapore:</p><ol type="1" id="dd9b604f-431b-4aa7-bf9f-af4c63eb0d85" class="numbered-list" start="1"><li><a href="https://www.polytechnic.edu.sg/admissions/financial-matters/scholarships">Polytechnic Scholarship</a></li></ol><ol type="1" id="7df70da8-23c5-4ccc-896d-1f6043f47c34" class="numbered-list" start="2"><li><a href="https://www.skillsfuture.sg/studyawards/overview/polytechnic-graduates">SkillsFuture Study Award for Polytechnic Graduates</a></li></ol><ol type="1" id="f63673d0-3fa2-4328-a278-bb067d04ce11" class="numbered-list" start="3"><li><a href="https://www.psc.gov.sg/scholarships/undergraduate/polytechnic-scholarship">PSC (Polytechnic) Scholarship</a></li></ol><ol type="1" id="396617d8-36a4-4813-8ef7-b789cece4774" class="numbered-list" start="4"><li><a href="https://www.ocbc.com/group/careers/scholarship">OCBC Local Undergraduate Scholarship</a></li></ol><ol type="1" id="882e58dd-9a52-4867-b47d-b34afc4a27c1" class="numbered-list" start="5"><li><a href="https://www.dbs.com.sg/personal/promotion/scholarship.html">DBS Bank Scholarship</a></li></ol><ol type="1" id="d2f13459-0609-4340-bef8-e537c3587050" class="numbered-list" start="6"><li><a href="https://www.maybankfoundation.com/corporate-responsibility/scholarship">Maybank Scholarship</a></li></ol><p id="8836147a-2b4f-4d0c-9be5-62f587e0a4ae" class="">Please note that eligibility criteria, application requirements, and deadlines may vary for each scholarship. It is advisable to visit the respective scholarship websites for detailed information and to check for any updates or changes in the application process.</p><p id="a32a49bd-af8d-43ef-bd4e-2e8385cd4bbf" class="">Remember to review the specific requirements and deadlines for each scholarship and submit your application within the designated application period.</p><h1 id="c5654165-a2a3-486f-abfb-bb0f408c7f9a" class="">Institutes of Technical Education (ITE)</h1><h2 id="593447e3-6685-42f2-a10c-525e100f6589" class="">Introduction</h2><p id="4c879fd9-399f-4f47-804a-63d42f3ec4a7" class="">Institutes of Technical Education (ITEs) are post-secondary institutions in Singapore that offer a range of technical and vocational education and training programs. These programs are designed to equip students with practical skills and knowledge for specific industries and occupations.</p><p id="93e05504-05ec-41ac-8e42-3a4296e9377e" class="">ITE education focuses on hands-on learning and provides students with opportunities to develop industry-relevant skills through classroom instruction, workshops, and internships. The curriculum is industry-driven and aims to meet the needs of the job market.</p><p id="0c064df9-6fb6-48fe-8dca-3ca2718ba854" class="">ITEs offer a variety of courses in areas such as engineering, business services, design, hospitality, applied sciences, and more. These courses are structured to provide students with a strong foundation in their chosen field and prepare them for entry-level positions or further education.</p><p id="30e8c84d-2a4d-4a61-93c3-6c6cf8f1f4b1" class="">Upon completion of their ITE courses, students can choose to enter the workforce or pursue higher education. ITE graduates may also have opportunities to continue their studies at polytechnics or other higher education institutions through articulation programs and pathways.</p><p id="b6b20502-e206-436a-8bf7-36ec0cc76400" class="">Overall, ITEs play a crucial role in providing technical and vocational education that meets industry demands, prepares students for the workforce, and contributes to the development of a skilled and competent workforce in Singapore.</p><p id="2bec178a-ee0f-45a0-bfc0-19e73a153071" class="">
+</p><h2 id="539b6ae1-61f3-4ad6-9f5c-c50ddec31888" class="">List of courses</h2><p id="77cc5b7e-499a-4980-bfab-2475266a169d" class="">Here is a list of courses offered by each Institute of Technical Education (ITE) in Singapore:</p><h3 id="7cf8367f-6ea8-4668-8a06-f5230bc3bc0d" class="">Institute of Technical Education (ITE) Central</h3><ul id="c56a2a20-96f0-405d-93a8-7a56ddcada80" class="bulleted-list"><li style="list-style-type:disc">Nitec in Aerospace Avionics</li></ul><ul id="c7411111-7aec-4553-96e1-750e607ebbf2" class="bulleted-list"><li style="list-style-type:disc">Nitec in Aerospace Machining Technology</li></ul><ul id="0049a661-228a-4aa8-a425-da09b5412792" class="bulleted-list"><li style="list-style-type:disc">Nitec in Automotive Technology</li></ul><ul id="13d2e84e-b02a-448d-89b5-0d18675a885f" class="bulleted-list"><li style="list-style-type:disc">Nitec in Beauty &amp; Wellness</li></ul><ul id="6f480453-26e5-4b30-958f-31b4c1e43a20" class="bulleted-list"><li style="list-style-type:disc">Nitec in Building Services</li></ul><ul id="02686e67-d2ba-475e-b26f-a8cbdf1012fb" class="bulleted-list"><li style="list-style-type:disc">Nitec in Business Services</li></ul><ul id="0e722515-f438-4217-98ec-8310b0d202a9" class="bulleted-list"><li style="list-style-type:disc">Nitec in Civil &amp; Structural Engineering Design</li></ul><ul id="c8692efc-d52c-4f2b-920a-fb0cd67a96d8" class="bulleted-list"><li style="list-style-type:disc">Nitec in Community Care &amp; Social Services</li></ul><ul id="73d47695-2bdb-4d75-be8d-376479049233" class="bulleted-list"><li style="list-style-type:disc">Nitec in Culinary Arts</li></ul><ul id="f58938a5-f1ee-4364-a3f0-e47788487d12" class="bulleted-list"><li style="list-style-type:disc">Nitec in Digital Audio &amp; Video Production</li></ul><ul id="628bdb44-0baa-4eb3-aa7d-8b1bfb53bee3" class="bulleted-list"><li style="list-style-type:disc">Nitec in Digital Animation</li></ul><ul id="76593d77-f9b2-4027-a7b5-5a1e105af8bd" class="bulleted-list"><li style="list-style-type:disc">Nitec in Electronics</li></ul><ul id="8aa0aed5-726c-4df1-ae75-74a699fb9750" class="bulleted-list"><li style="list-style-type:disc">Nitec in Electronics (Computer Networking)</li></ul><ul id="b34dd75a-3569-44d8-a8db-6199b0d19bcc" class="bulleted-list"><li style="list-style-type:disc">Nitec in Facility Technology</li></ul><ul id="088da55c-f7a1-42b3-9674-61b0256daee5" class="bulleted-list"><li style="list-style-type:disc">Nitec in Floristry</li></ul><ul id="f1f97f95-f45e-4a69-9ef7-a25f21fd8a3e" class="bulleted-list"><li style="list-style-type:disc">Nitec in Food &amp; Beverage Operations</li></ul><ul id="8250f7f6-660a-4460-b897-210e2bbd15a7" class="bulleted-list"><li style="list-style-type:disc">Nitec in Games Art &amp; Design</li></ul><ul id="b24ab982-f33f-4414-9228-5798320988c6" class="bulleted-list"><li style="list-style-type:disc">Nitec in Hair Fashion &amp; Design</li></ul><ul id="fc518d54-5a2a-435e-bb06-87ab787f329a" class="bulleted-list"><li style="list-style-type:disc">Nitec in Health Services</li></ul><ul id="8769a4d0-46be-42b7-978e-77ee44e9a7ab" class="bulleted-list"><li style="list-style-type:disc">Nitec in Hospitality Operations</li></ul><ul id="7f0026b1-3f56-4f71-b133-ffa35502f44a" class="bulleted-list"><li style="list-style-type:disc">Nitec in Info-Comm Technology</li></ul><ul id="0047b956-194b-48b2-bff9-22e542936c2b" class="bulleted-list"><li style="list-style-type:disc">Nitec in Mechanical Technology (Automotive Technology)</li></ul><ul id="2984e293-1f70-4795-af8b-123a45b13f3c" class="bulleted-list"><li style="list-style-type:disc">Nitec in Mechanical Technology (Mechatronics)</li></ul><ul id="9017f756-d068-414a-820e-cff1346820d8" class="bulleted-list"><li style="list-style-type:disc">Nitec in Media &amp; Communication Technology</li></ul><ul id="5970215b-2da6-45fe-8d66-4198f9a1cd59" class="bulleted-list"><li style="list-style-type:disc">Nitec in Multimedia Technology</li></ul><ul id="6b0f6199-99e6-4647-98e9-4b50199b206c" class="bulleted-list"><li style="list-style-type:disc">Nitec in Nursing</li></ul><ul id="99a9298c-f5e6-437d-99b5-cab198c9850c" class="bulleted-list"><li style="list-style-type:disc">Nitec in Outdoor &amp; Adventure Learning</li></ul><ul id="cfc59bf5-349b-4eeb-a53e-d021dfc47cf9" class="bulleted-list"><li style="list-style-type:disc">Nitec in Performance Production</li></ul><ul id="d058da56-8ba1-43f0-a43b-199794afa2ac" class="bulleted-list"><li style="list-style-type:disc">Nitec in Pharmaceutical Science</li></ul><ul id="ab36f16c-2390-4485-ba98-6c3c26c5d395" class="bulleted-list"><li style="list-style-type:disc">Nitec in Rapid Transit Technology</li></ul><ul id="f1a06b05-36f4-464a-9abd-08560ca86fba" class="bulleted-list"><li style="list-style-type:disc">Nitec in Retail Services</li></ul><ul id="3db30c27-7de3-4e5b-bb98-227435b93277" class="bulleted-list"><li style="list-style-type:disc">Nitec in Security Systems Integration</li></ul><ul id="3f99aa37-0f70-4404-9c79-3c8545a7c778" class="bulleted-list"><li style="list-style-type:disc">Nitec in Social Media &amp; Web Development</li></ul><ul id="13322339-2389-4d1f-a81f-be5b14871f1a" class="bulleted-list"><li style="list-style-type:disc">Nitec in Sport Management</li></ul><ul id="b0f7cfd8-6329-4256-9925-92803810aae3" class="bulleted-list"><li style="list-style-type:disc">Nitec in Visual Communication</li></ul><p id="a6a6da8d-9425-458a-84f6-3098b82dcc2b" class="">For more information on the courses offered at ITE Central, you can visit their <a href="https://www.ite.edu.sg/">website</a>.</p><h3 id="0df5b188-5226-419d-92a8-0ba7e7cfa55b" class="">Institute of Technical Education (ITE) East</h3><ul id="269e889f-b28d-4758-a769-fd5f20b554bf" class="bulleted-list"><li style="list-style-type:disc">Nitec in Aerospace Technology</li></ul><ul id="fd6feae4-52ae-4ea0-a2e6-b5abaa3624df" class="bulleted-list"><li style="list-style-type:disc">Nitec in Automotive Technology</li></ul><ul id="0aec05b3-0ca0-44ca-bafb-b2e38f35d665" class="bulleted-list"><li style="list-style-type:disc">Nitec in Beauty &amp; Wellness</li></ul><ul id="47c3d373-1740-4282-8540-8d1fc25bdb99" class="bulleted-list"><li style="list-style-type:disc">Nitec in Business Services</li></ul><ul id="95298fa7-dec7-4fdc-9108-8411b86d798f" class="bulleted-list"><li style="list-style-type:disc">Nitec in Civil &amp; Structural Engineering Design</li></ul><ul id="7107650e-d8f9-4844-b4a6-4616302d67ce" class="bulleted-list"><li style="list-style-type:disc">Nitec in Community Care &amp; Social Services</li></ul><ul id="80f17878-4a8d-4672-89dc-914d5d530560" class="bulleted-list"><li style="list-style-type:disc">Nitec in Culinary Arts</li></ul><ul id="1a9b8a5c-e8a1-434b-914b-d9977bdd91f8" class="bulleted-list"><li style="list-style-type:disc">Nitec in Cyber &amp; Network Security</li></ul><ul id="d9c49c98-1fda-4d6b-b477-aea3d8634e17" class="bulleted-list"><li style="list-style-type:disc">Nitec in Electrical Technology</li></ul><ul id="31b50ae0-b1d7-4f34-b8af-83618301ba12" class="bulleted-list"><li style="list-style-type:disc">Nitec in Electronics (Computer Networking)</li></ul><ul id="32fca6c9-0723-46b9-b0ae-33020c40ab3d" class="bulleted-list"><li style="list-style-type:disc">Nitec in Electronics (Consumer Electronics)</li></ul><ul id="3d28bb38-40a1-40c1-b8fb-c714546cc3cb" class="bulleted-list"><li style="list-style-type:disc">Nitec in Facility Technology</li></ul><ul id="a29a2133-1f14-46f0-b94b-6cfbd690e24c" class="bulleted-list"><li style="list-style-type:disc">Nitec in Food &amp; Beverage Operations</li></ul><ul id="4b73ff17-9aa0-4a91-8a01-42d535c17a31" class="bulleted-list"><li style="list-style-type:disc">Nitec in Games Art &amp; Design</li></ul><ul id="6cbb85b1-c2ce-4591-822b-24187f241ff8" class="bulleted-list"><li style="list-style-type:disc">Nitec in Hair Fashion &amp; Design</li></ul><ul id="683eaa42-3788-4874-9f50-c202cd4b7021" class="bulleted-list"><li style="list-style-type:disc">Nitec in Hospitality Operations</li></ul><ul id="8743ce17-717c-4d6d-8605-364eaa53cd0e" class="bulleted-list"><li style="list-style-type:disc">Nitec in Info-Communications Technology</li></ul><ul id="290c8a8b-1feb-495e-87dc-0216daa69aaa" class="bulleted-list"><li style="list-style-type:disc">Nitec in Mechanical Technology (Automotive Technology)</li></ul><ul id="635fa0a8-accc-4abe-a80c-76ccf2a3bba9" class="bulleted-list"><li style="list-style-type:disc">Nitec in Mechanical Technology (Mechatronics)</li></ul><ul id="ec2af44b-c6e8-41cd-aef1-e66d0c15c253" class="bulleted-list"><li style="list-style-type:disc">Nitec in Multimedia Technology</li></ul><ul id="d8828cc1-9d57-47a7-9520-0d0e200dd90c" class="bulleted-list"><li style="list-style-type:disc">Nitec in Nursing</li></ul><ul id="61f4091e-97f1-43db-b46c-046284d5cc70" class="bulleted-list"><li style="list-style-type:disc">Nitec in Outdoor &amp; Adventure Learning</li></ul><ul id="05594ab2-474b-47a9-a963-e63485ea06e2" class="bulleted-list"><li style="list-style-type:disc">Nitec in Performance Production</li></ul><ul id="81cf9b2b-a53c-4a8b-914f-b635707bec52" class="bulleted-list"><li style="list-style-type:disc">Nitec in Pharmaceutical Science</li></ul><ul id="b53446e7-4f35-48c4-b116-6f0f8546dd76" class="bulleted-list"><li style="list-style-type:disc">Nitec in Security Systems Integration</li></ul><ul id="61ed84dd-bf7f-412d-8af3-d48da3725d3b" class="bulleted-list"><li style="list-style-type:disc">Nitec in Social Media &amp; Web Development</li></ul><ul id="3442e044-648f-4466-b8c3-aef63df1a5a2" class="bulleted-list"><li style="list-style-type:disc">Nitec in Sport Management</li></ul><ul id="17866053-f66b-40b0-868c-13c28fe0bf59" class="bulleted-list"><li style="list-style-type:disc">Nitec in Visual Communication</li></ul><p id="0215ea1f-1ce3-4534-9d41-967dd7181e19" class="">For more information on the courses offered at ITE East, you can visit their <a href="https://www.ite.edu.sg/">website</a>.</p><h3 id="0934a244-28b4-41ac-b8f9-a7345fb91d6f" class="">Institute of Technical Education (ITE) West</h3><ul id="794f8b91-761f-425b-ab80-8b6d72022a1a" class="bulleted-list"><li style="list-style-type:disc">Nitec in Aerospace Technology</li></ul><ul id="1bfa5896-4927-4d78-a1d8-8a8476747626" class="bulleted-list"><li style="list-style-type:disc">Nitec in Automotive Technology</li></ul><ul id="0604bc4b-f94f-4425-892b-48ef83f2c303" class="bulleted-list"><li style="list-style-type:disc">Nitec in Beauty &amp; Wellness</li></ul><ul id="d9410d64-e896-49fc-ba93-1c4539874420" class="bulleted-list"><li style="list-style-type:disc">Nitec in Business Services</li></ul><ul id="4a52febf-1fe5-4176-82f9-e4145a8c706a" class="bulleted-list"><li style="list-style-type:disc">Nitec in Civil &amp; Structural Engineering Design</li></ul><ul id="1f4f8cf9-6f00-4c8d-8c05-2f7660c7f670" class="bulleted-list"><li style="list-style-type:disc">Nitec in Community Care &amp; Social Services</li></ul><ul id="e58d9a4f-de48-446d-b0a7-df3372a7306d" class="bulleted-list"><li style="list-style-type:disc">Nitec in Culinary Arts</li></ul><ul id="fcba5a85-9841-454e-8b16-48af4538aa39" class="bulleted-list"><li style="list-style-type:disc">Nitec in Cyber &amp; Network Security</li></ul><ul id="4d6e633d-611c-4e73-8ccc-cd0729e32031" class="bulleted-list"><li style="list-style-type:disc">Nitec in Electrical Technology</li></ul><ul id="e328ed64-3af4-40da-ad21-89e99298ad85" class="bulleted-list"><li style="list-style-type:disc">Nitec in Electronics (Computer Networking)</li></ul><ul id="112f6dcf-b502-418b-ad0c-749009827b12" class="bulleted-list"><li style="list-style-type:disc">Nitec in Electronics (Consumer Electronics)</li></ul><ul id="62ba46c8-0786-42be-b6d8-8fd5ea0fd062" class="bulleted-list"><li style="list-style-type:disc">Nitec in Facility Technology</li></ul><ul id="60818dcf-d41f-42aa-81a1-84c6414d1c7e" class="bulleted-list"><li style="list-style-type:disc">Nitec in Food &amp; Beverage Operations</li></ul><ul id="70fd758d-1f82-422a-9166-2605eaddbbc2" class="bulleted-list"><li style="list-style-type:disc">Nitec in Games Art &amp; Design</li></ul><ul id="26c957e5-b5e4-4c28-8efe-d3f1cb2b4728" class="bulleted-list"><li style="list-style-type:disc">Nitec in Hair Fashion &amp; Design</li></ul><ul id="60245d51-c4d1-43ad-80d1-7a36dcc49073" class="bulleted-list"><li style="list-style-type:disc">Nitec in Hospitality Operations</li></ul><ul id="6689955a-fd2a-4683-a41e-f9ace324cdfb" class="bulleted-list"><li style="list-style-type:disc">Nitec in Info-Communications Technology</li></ul><ul id="ddc261ea-da91-45c9-8836-37529d026698" class="bulleted-list"><li style="list-style-type:disc">Nitec in Mechanical Technology (Automotive Technology)</li></ul><ul id="1a88f54f-62f4-45aa-8e67-6d2df3de189e" class="bulleted-list"><li style="list-style-type:disc">Nitec in Mechanical Technology (Mechatronics)</li></ul><ul id="0b629bc3-98ee-407a-8870-5f2452ac3e16" class="bulleted-list"><li style="list-style-type:disc">Nitec in Multimedia Technology</li></ul><ul id="f39cc204-6587-4ddc-86b8-6113a7a76fc2" class="bulleted-list"><li style="list-style-type:disc">Nitec in Nursing</li></ul><ul id="c8b3dcf5-6266-4610-8431-330b1f9b186c" class="bulleted-list"><li style="list-style-type:disc">Nitec in Outdoor &amp; Adventure Learning</li></ul><ul id="64108fe6-45ee-4986-a775-ae5c882da1e8" class="bulleted-list"><li style="list-style-type:disc">Nitec in Performance Production</li></ul><ul id="256808f7-06ab-43f9-b938-390feed69427" class="bulleted-list"><li style="list-style-type:disc">Nitec in Pharmaceutical Science</li></ul><ul id="202a0e43-8d0a-46b9-87d4-3173df6994ca" class="bulleted-list"><li style="list-style-type:disc">Nitec in Security Systems Integration</li></ul><ul id="f8361a75-bcea-4651-9e76-67ea60163ec5" class="bulleted-list"><li style="list-style-type:disc">Nitec in Social Media &amp; Web Development</li></ul><ul id="0fe55c21-b630-42e8-8d40-b2e16ba0b47f" class="bulleted-list"><li style="list-style-type:disc">Nitec in Sport Management</li></ul><ul id="1c7cb693-0cdb-4c18-b086-84e420fd7ae3" class="bulleted-list"><li style="list-style-type:disc">Nitec in Visual Communication</li></ul><p id="64dee352-245d-4f80-8d56-ac525ac2353e" class="">For more information on the courses offered at ITE West, you can visit their <a href="https://www.ite.edu.sg/">website</a>.</p><p id="7ff38429-ee7f-42e5-9712-dd83d67e67c8" class="">Please note that this is not an exhaustive list of courses, and there may be additional courses available at each ITE. It is advisable to visit the respective ITE websites for the most up-to-date information on their course offerings.</p><p id="8f2d1f07-ca7d-4665-a77c-afe081961ef9" class="">
+</p><h2 id="fd39d0b4-f63d-43bd-84c9-808f32f878fa" class="">Admission requirement</h2><p id="1dabdc2d-103e-4bdf-8bed-b986284a9843" class="">The admission requirements for Institutes of Technical Education (ITEs) in Singapore typically include the following:</p><ol type="1" id="aaf59a4d-1240-4e90-b71b-ad4c95b51aa4" class="numbered-list" start="1"><li>GCE N-Level Examination Results: ITEs consider the GCE N-Level examination results for admission. Students are required to meet the minimum entry requirements set by each ITE, which usually include a certain number of passes in specific subjects.</li></ol><ol type="1" id="c4e998d7-ad11-4c88-9d03-baba8177746e" class="numbered-list" start="2"><li>Subject Prerequisites: Some courses may have specific subject prerequisites. For example, certain engineering or science-related courses may require a minimum grade in Mathematics or Science subjects.</li></ol><ol type="1" id="b57cdd08-6ef1-4337-84fc-d184358880ac" class="numbered-list" start="3"><li>Co-Curricular Activities (CCA): ITEs also consider students&#x27; involvement in co-curricular activities, leadership roles, and achievements within or outside the school. These activities demonstrate a student&#x27;s holistic development and may be taken into account during the selection process.</li></ol><ol type="1" id="416243b1-0d0f-428f-b922-f3dad477cb5d" class="numbered-list" start="4"><li>Interview or Selection Test: In some cases, ITEs may conduct an interview or selection test as part of the admission process. This is to assess a student&#x27;s suitability for the course and their potential to contribute to the ITE community.</li></ol><p id="74b63f05-7cc8-465f-a1d8-9c69517c10f1" class="">It is important to note that admission to ITEs is competitive, and meeting the minimum requirements does not guarantee a placement. It is advisable to check the specific admission requirements and criteria of each ITE you are interested in applying to. Consulting with your school counselor or academic advisor can provide further guidance on the admission process and requirements specific to your situation.</p><p id="b4543ef7-4ae5-4621-bd10-dc3d4934849c" class="">Remember to carefully review the admission information provided by the ITEs and submit your application within the designated application period.</p><p id="b9e6f827-4843-479c-b460-4e5a645b69b2" class="">
+</p><h2 id="e93c4e0f-5917-4351-8ab0-ec38849ec038" class="">List of scholarships</h2><p id="9a79ede8-c850-4192-9c34-c8ff24d6a4f0" class="">Here is a list of scholarships available for students studying at Institutes of Technical Education (ITE):</p><ol type="1" id="4888425a-cdcc-499a-8939-86f1e470ed34" class="numbered-list" start="1"><li><a href="https://www.ite.edu.sg/admissions/financial-matters/financial-assistance/ite-education-fund">ITE Education Fund</a></li></ol><ol type="1" id="710673ab-bc5d-4ed7-971e-e0ca178d58b8" class="numbered-list" start="2"><li><a href="https://www.skillsfuture.sg/studyawards/ite">SkillsFuture Study Award for ITE Graduates</a></li></ol><ol type="1" id="b41379a3-c969-4353-b407-42c197a7a869" class="numbered-list" start="3"><li><a href="https://www.mendaki.org.sg/transforming-lives/education/education-schemes/enhanced-education-scheme-ees">MENDAKI&#x27;s Enhanced Education Scheme</a></li></ol><ol type="1" id="26e50f5c-6c70-41ac-a97c-e58141ef326a" class="numbered-list" start="4"><li><a href="https://www.cdac.org.sg/bursary/">CDAC-ITE Bursary</a></li></ol><ol type="1" id="4b2bf61a-24fc-4b3a-8e79-b7f2d281a751" class="numbered-list" start="5"><li><a href="https://eurasians.org/">Eurasian Community Fund (ECF) Bursary</a></li></ol><p id="299b12d9-66f9-46e8-8431-6a93660d4433" class="">These scholarships provide financial support to ITE students to help cover their tuition fees and other educational expenses. Each scholarship has its own eligibility criteria and application process. It is advisable to visit the respective scholarship websites for detailed information on the application requirements and deadlines.</p><p id="1c787596-1258-46a8-86f6-3a4b7fb4cc10" class="">Remember to carefully review the scholarship details and submit your application within the designated application period.</p><p id="dbd0118f-7407-49c0-9864-5b5d88baa2ba" class="">Please note that this is not an exhaustive list of scholarships, and there may be additional scholarships available for ITE students. It is advisable to check with your school counselor or visit the financial assistance office at your respective ITE for more information on available scholarships and financial assistance schemes.</p><p id="e65185a3-7c96-4a49-9bcc-3e1d519a06c6" class="">
+</p><h1 id="1cab3277-e370-417f-8d5f-c154271ed0b1" class="">Private Schools</h1><h2 id="1bd2a188-8464-4491-850c-d574e68647dc" class="">Introduction</h2><p id="cc8dcbb0-8a3c-4ace-a72e-7b0921863530" class="">Private schools in Singapore offer alternative education options for students after secondary school. These schools provide diverse academic programs and specialized courses that cater to different interests and career pathways.</p><p id="81c5bf49-c9ac-4e84-bdc3-48f7639abe59" class="">Private schools often offer diploma programs, certificate courses, or preparatory courses for international qualifications. They may have partnerships with overseas educational institutions, allowing students to pursue international qualifications without leaving Singapore. Private schools also focus on providing industry-relevant skills and practical training to prepare students for the workforce.</p><p id="00467738-25a0-42d8-b29f-4cba4c81e159" class="">Some private schools in Singapore offer programs in areas such as business, hospitality, design, media, computing, and more. These programs provide students with a strong foundation in their chosen field and equip them with the necessary knowledge and skills to excel in their careers.</p><p id="46c0479b-8484-40ab-ba24-28634568f4b3" class="">When considering private schools, it is essential to research and evaluate their accreditation, reputation, curriculum, faculty, facilities, and career support services. It is advisable to visit the school&#x27;s website, attend open houses or information sessions, and speak with current or former students to gather more information about the programs and the school&#x27;s overall environment.</p><p id="e5c80888-54cb-491f-9ad5-a50c8a6257cd" class="">Private schools often have different admission requirements and application processes compared to public institutions. It is advisable to check the specific admission criteria, deadlines, and prerequisites for the programs you are interested in. Consulting with school counselors or academic advisors can provide further guidance on the application process and requirements specific to your situation.</p><p id="d725f674-82c3-4256-ae65-b8641c81b3b4" class="">Remember to carefully review the admission information provided by private schools and submit your application within the designated application period.</p><p id="8a2ed2ed-14de-4957-b1fd-23f123e44349" class="">Please note that this is a general introduction to private schools after secondary school in Singapore, and it is advisable to research and gather more specific information about individual private schools and their programs.</p><h3 id="c3643e03-8f10-48df-b2fe-45d0cb1b330e" class="">List of Private Schools</h3><p id="f107b9b3-d064-47fe-8ebf-4dab693d3377" class="">Here is a list of private schools in Singapore:</p><ol type="1" id="74fb9065-36e5-4e57-94a2-c672f3eb3e81" class="numbered-list" start="1"><li><a href="https://www.nafa.edu.sg/">Nanyang Academy of Fine Arts (NAFA)</a></li></ol><ol type="1" id="9e56c3e7-4499-47fb-b1d8-fbddbbaf3717" class="numbered-list" start="2"><li><a href="https://www.lasalle.edu.sg/">LASALLE College of the Arts</a></li></ol><ol type="1" id="5d7215b4-ec0a-48f1-9836-0b41f8d6a73a" class="numbered-list" start="3"><li><a href="https://www.psb-academy.edu.sg/">PSB Academy</a></li></ol><ol type="1" id="2d37b47f-7cfb-4ea6-ab92-11f37dd83220" class="numbered-list" start="4"><li><a href="https://www.mdis.edu.sg/">MDIS (Management Development Institute of Singapore)</a></li></ol><ol type="1" id="74c76970-0244-4a70-af00-248e7f0d159f" class="numbered-list" start="5"><li><a href="https://www.simge.edu.sg/">SIM Global Education</a></li></ol><ol type="1" id="e9c9e1b9-68c3-4d58-90cb-5c6b256ee2d4" class="numbered-list" start="6"><li><a href="https://www.kaplan.com.sg/">Kaplan Singapore</a></li></ol><ol type="1" id="8814c5d8-fc8f-4167-b919-23bbbba55ef2" class="numbered-list" start="7"><li><a href="https://www.informatics.edu.sg/">Informatics Academy</a></li></ol><ol type="1" id="bc229635-f19f-43b0-b061-1e5f40d5d9ce" class="numbered-list" start="8"><li><a href="https://www.tmc.edu.sg/">TMC Academy</a></li></ol><ol type="1" id="a21c70b8-c4ca-4a44-b736-af6232cef7fb" class="numbered-list" start="9"><li><a href="https://www.raffles-college.edu.sg/">Raffles College of Higher Education</a></li></ol><ol type="1" id="11578fbd-8ee4-4aa8-8341-7663a99275bd" class="numbered-list" start="10"><li><a href="http://www.dimensions.edu.sg/">Dimensions International College</a></li></ol><p id="3dbc332c-4786-42f8-87e6-914c4622baba" class="">Please note that this is not an exhaustive list of private schools in Singapore. There are many other private schools offering a variety of programs. It is advisable to research and gather more specific information about each school and their programs of interest.</p><h3 id="ebb3f04f-4e88-41d1-a83f-a0e0670b251e" class="">List of courses</h3><p id="9755ecca-edc8-4883-bdc5-fdc0fc80e6a4" class="">Here is a more extensive list of private schools in Singapore and some of the courses they offer:</p><ol type="1" id="344cfc7e-6676-43d2-9aca-fbfffa7f4c6c" class="numbered-list" start="1"><li><a href="https://www.nafa.edu.sg/">Nanyang Academy of Fine Arts (NAFA)</a><ul id="48baf3a1-c139-4a98-a43b-c551a4dcec6b" class="bulleted-list"><li style="list-style-type:disc">Diploma in Fine Art</li></ul><ul id="f77f371d-6119-474e-bc6d-2919f028a129" class="bulleted-list"><li style="list-style-type:disc">Diploma in Design &amp; Media</li></ul><ul id="f413a40a-1a91-4b6a-8ee9-3bf64e56cb6e" class="bulleted-list"><li style="list-style-type:disc">Diploma in Arts Management</li></ul><ul id="03192651-e0e8-4fda-b41a-59fa3eb73f70" class="bulleted-list"><li style="list-style-type:disc">Diploma in Theatre</li></ul><ul id="6c0d5d70-0f33-4ade-8501-0e10e9206584" class="bulleted-list"><li style="list-style-type:disc">Diploma in Music</li></ul><ul id="8d7818d4-0b81-43b2-af80-8254504a5a59" class="bulleted-list"><li style="list-style-type:disc">Diploma in Dance</li></ul><ul id="3a41bbe8-b8d9-45e8-8c74-77f3a1bf1d1a" class="bulleted-list"><li style="list-style-type:disc">Diploma in Theatre Production</li></ul><ul id="488d1368-6355-42e1-a140-acc018756389" class="bulleted-list"><li style="list-style-type:disc">Diploma in Arts Education</li></ul></li></ol><ol type="1" id="9b9b233b-07ce-4f1d-839e-001008902aa9" class="numbered-list" start="2"><li><a href="https://www.lasalle.edu.sg/">LASALLE College of the Arts</a><ul id="c18a6eb7-09f6-4671-ad42-8dcddc9c43ad" class="bulleted-list"><li style="list-style-type:disc">Diploma in Animation Art</li></ul><ul id="610e01ac-85ef-41b1-be75-365e4cdc5bda" class="bulleted-list"><li style="list-style-type:disc">Diploma in Broadcast Media</li></ul><ul id="956540ce-a3de-4312-be84-d353bdb453da" class="bulleted-list"><li style="list-style-type:disc">Diploma in Design Communication</li></ul><ul id="5c8c4f92-5f33-4b66-a32d-6a2b1f4b7e1c" class="bulleted-list"><li style="list-style-type:disc">Diploma in Fashion</li></ul><ul id="8dd8c5f5-2907-4621-993f-d65caafa1fc6" class="bulleted-list"><li style="list-style-type:disc">Diploma in Fine Arts</li></ul><ul id="2c46cfbd-31a5-4048-a528-3d5135672a50" class="bulleted-list"><li style="list-style-type:disc">Diploma in Interior Design</li></ul><ul id="198bad81-6bd8-4d21-a91d-ee91a3f64ff7" class="bulleted-list"><li style="list-style-type:disc">Diploma in Music</li></ul><ul id="b336240c-b03b-4319-b314-7d47a8376f69" class="bulleted-list"><li style="list-style-type:disc">Diploma in Performing Arts</li></ul></li></ol><ol type="1" id="ead3877f-ef8a-438e-a99c-b6a4c6937675" class="numbered-list" start="3"><li><a href="https://www.psb-academy.edu.sg/">PSB Academy</a><ul id="612e4abf-1283-4d3a-87e8-335e69d9b825" class="bulleted-list"><li style="list-style-type:disc">Diploma in Business Administration</li></ul><ul id="34ea0827-2d7d-4988-997b-a383f47dc3bf" class="bulleted-list"><li style="list-style-type:disc">Diploma in Engineering</li></ul><ul id="629f79e1-e885-4702-98b1-14242e297a05" class="bulleted-list"><li style="list-style-type:disc">Diploma in Information Technology</li></ul><ul id="471c6d2d-62c4-44b3-9e66-7548de84a6f1" class="bulleted-list"><li style="list-style-type:disc">Diploma in Media &amp; Communications</li></ul><ul id="fb445b71-4af8-4b66-831a-9fa312f81000" class="bulleted-list"><li style="list-style-type:disc">Diploma in Tourism &amp; Hospitality Management</li></ul><ul id="cbdb8c60-cb82-45cb-86b3-4c6410c6234b" class="bulleted-list"><li style="list-style-type:disc">Diploma in Psychology</li></ul><ul id="a0c15ba0-f48c-4778-bbd2-802295eadc3f" class="bulleted-list"><li style="list-style-type:disc">Diploma in Early Childhood Studies</li></ul><ul id="bc360593-5756-4e9e-b8b7-860880a783a0" class="bulleted-list"><li style="list-style-type:disc">Diploma in Sports and Exercise Sciences</li></ul></li></ol><ol type="1" id="57e6210d-7de7-4dda-958f-61080a5d1602" class="numbered-list" start="4"><li><a href="https://www.mdis.edu.sg/">MDIS (Management Development Institute of Singapore)</a><ul id="3fdd997a-3c0e-4841-be92-dd7e97a02bcb" class="bulleted-list"><li style="list-style-type:disc">Diploma in Business Administration</li></ul><ul id="ee1c4c49-0e62-478c-9392-bbbdc3c31d20" class="bulleted-list"><li style="list-style-type:disc">Diploma in Engineering</li></ul><ul id="47651260-98fa-49a2-8b4c-6f4244e75df8" class="bulleted-list"><li style="list-style-type:disc">Diploma in Fashion Design</li></ul><ul id="09a6875c-abdd-4e39-8672-65513754230c" class="bulleted-list"><li style="list-style-type:disc">Diploma in Mass Communications</li></ul><ul id="25e47292-fa14-493a-a15b-9afbbd454d7e" class="bulleted-list"><li style="list-style-type:disc">Diploma in Psychology</li></ul><ul id="16ed0c83-2c19-481e-9080-ecfc0fbab657" class="bulleted-list"><li style="list-style-type:disc">Diploma in Travel, Tourism, and Hospitality Management</li></ul><ul id="b136da2d-9257-401d-9743-5aa4b3a388b3" class="bulleted-list"><li style="list-style-type:disc">Diploma in Biomedical Sciences</li></ul><ul id="b1b4a4e6-99fb-47e6-b531-3e678ed88b51" class="bulleted-list"><li style="list-style-type:disc">Diploma in Nursing</li></ul></li></ol><ol type="1" id="25a72ce2-5c30-4278-b8a2-ff81c116fd7f" class="numbered-list" start="5"><li><a href="https://www.simge.edu.sg/">SIM Global Education</a><ul id="45a9b9d1-15d9-465a-b250-3712ee05d6cc" class="bulleted-list"><li style="list-style-type:disc">Diploma in Accounting</li></ul><ul id="89db1001-d871-4cdb-aa4e-39ad509dce0d" class="bulleted-list"><li style="list-style-type:disc">Diploma in Banking &amp; Finance</li></ul><ul id="f436116a-2964-45f9-b8cc-a2ca3c981da2" class="bulleted-list"><li style="list-style-type:disc">Diploma in International Business</li></ul><ul id="647beae6-0fb6-454e-bfe4-db75e38b478f" class="bulleted-list"><li style="list-style-type:disc">Diploma in Marketing</li></ul><ul id="d990f9f2-b87a-4fb4-90ea-bb065f05bb46" class="bulleted-list"><li style="list-style-type:disc">Diploma in Psychology</li></ul><ul id="1e91c90d-bf1b-4768-9557-b7706615b7dd" class="bulleted-list"><li style="list-style-type:disc">Diploma in Human Resource Management</li></ul><ul id="31779067-3c3f-458b-9138-f42b10cc586a" class="bulleted-list"><li style="list-style-type:disc">Diploma in Supply Chain Management</li></ul><ul id="0826cc0f-d026-4f52-a4f6-9324049df5e2" class="bulleted-list"><li style="list-style-type:disc">Diploma in Digital Marketing</li></ul></li></ol><ol type="1" id="f3329232-a41a-4b32-b93c-9958ebd16a38" class="numbered-list" start="6"><li><a href="https://www.kaplan.com.sg/">Kaplan Singapore</a><ul id="bed75528-ce53-4b53-a878-113b585931af" class="bulleted-list"><li style="list-style-type:disc">Diploma in Business &amp; Management</li></ul><ul id="6030b3e2-1db9-4f5e-9e52-289bb4002b99" class="bulleted-list"><li style="list-style-type:disc">Diploma in Engineering</li></ul><ul id="8452726f-498d-4eb2-a363-11aadc648d6b" class="bulleted-list"><li style="list-style-type:disc">Diploma in Information Technology</li></ul><ul id="fb1f8dfc-d240-46ad-b7c8-23d4fb61080e" class="bulleted-list"><li style="list-style-type:disc">Diploma in Mass Communication</li></ul><ul id="00f3c4ad-aa1d-4411-a345-f664d4e408e1" class="bulleted-list"><li style="list-style-type:disc">Diploma in Psychology</li></ul><ul id="9d216276-0e71-49b0-bbff-21f4de086667" class="bulleted-list"><li style="list-style-type:disc">Diploma in Hospitality and Tourism Management</li></ul><ul id="cba784f5-b8a7-4c70-ad5b-3019e68663ed" class="bulleted-list"><li style="list-style-type:disc">Diploma in Early Childhood Education</li></ul><ul id="0c998b75-77c5-48dc-bc40-7cc6761aad79" class="bulleted-list"><li style="list-style-type:disc">Diploma in Environmental Management</li></ul></li></ol><ol type="1" id="24f9c4ff-e8c6-406c-bffe-9a5411d622be" class="numbered-list" start="7"><li><a href="https://www.informatics.edu.sg/">Informatics Academy</a><ul id="94cd6c36-4abc-4b34-b1b8-d952157f5a7b" class="bulleted-list"><li style="list-style-type:disc">Diploma in Business Administration</li></ul><ul id="caf8f364-0295-4584-8140-8a3db5b6d447" class="bulleted-list"><li style="list-style-type:disc">Diploma in Computer Science</li></ul><ul id="4d5cd7f7-d49e-4771-898d-f6575ebaa4d7" class="bulleted-list"><li style="list-style-type:disc">Diploma in Game Design &amp; Development</li></ul><ul id="50b9d433-f2d1-4735-9804-b463b2c92631" class="bulleted-list"><li style="list-style-type:disc">Diploma in Digital Marketing</li></ul><ul id="1e2c672b-262d-43bc-b493-e3e1e6cf4468" class="bulleted-list"><li style="list-style-type:disc">Diploma in Interior Design</li></ul><ul id="abecae80-30ef-429d-a620-fa0d1ff494ab" class="bulleted-list"><li style="list-style-type:disc">Diploma in Cybersecurity</li></ul><ul id="828a4044-8278-40d5-b7fb-b13169000a0c" class="bulleted-list"><li style="list-style-type:disc">Diploma in Multimedia &amp; Animation</li></ul><ul id="dd277b1e-141d-4ca0-9f39-ee48f1616b6c" class="bulleted-list"><li style="list-style-type:disc">Diploma in Mobile App Development</li></ul></li></ol><ol type="1" id="a6ab1f75-d8ad-490e-9a00-b130d37084ee" class="numbered-list" start="8"><li><a href="https://www.tmc.edu.sg/">TMC Academy</a><ul id="d70dff54-d5f6-415d-abe7-9cc9b3769325" class="bulleted-list"><li style="list-style-type:disc">Diploma in Business &amp; Marketing</li></ul><ul id="6febcbaf-fbbc-4ba4-b953-4be52c6fc8b6" class="bulleted-list"><li style="list-style-type:disc">Diploma in Hospitality &amp; Tourism Management</li></ul><ul id="60760b0f-7bda-4ac9-a286-9ebbdcbfac0f" class="bulleted-list"><li style="list-style-type:disc">Diploma in Infocomm &amp; Network Technology</li></ul><ul id="68693b6a-5405-4f1c-abc7-5b69b040b9cc" class="bulleted-list"><li style="list-style-type:disc">Diploma in Psychology Studies</li></ul><ul id="d9ff257b-fe76-4695-9ff8-982689c93a6e" class="bulleted-list"><li style="list-style-type:disc">Diploma in International Studies</li></ul><ul id="aa049822-8e33-45f1-8072-f7d5974a98b4" class="bulleted-list"><li style="list-style-type:disc">Diploma in Early Childhood Education</li></ul><ul id="3fe2f976-b030-4e59-b3bc-eaa48ca99fe6" class="bulleted-list"><li style="list-style-type:disc">Diploma in Event &amp; Hospitality Management</li></ul><ul id="e04b6194-1482-4df2-be54-6afd7562199a" class="bulleted-list"><li style="list-style-type:disc">Diploma in Media &amp; Communication</li></ul></li></ol><ol type="1" id="1898c831-b2eb-4997-b69a-947cfb6a0d92" class="numbered-list" start="9"><li><a href="https://www.raffles-college.edu.sg/">Raffles College of Higher Education</a><ul id="3eaff480-a5d1-415a-b8f7-db60ca3d972b" class="bulleted-list"><li style="list-style-type:disc">Diploma in Fashion Marketing &amp; Management</li></ul><ul id="321827ff-9b0f-466b-899f-9b2b46212e19" class="bulleted-list"><li style="list-style-type:disc">Diploma in Graphic Design</li></ul><ul id="508f57f4-ae27-4b50-b2a4-60d57717e91f" class="bulleted-list"><li style="list-style-type:disc">Diploma in Interior Design</li></ul><ul id="b69fbb49-1d5f-4c56-bc25-5033dd6eb4ef" class="bulleted-list"><li style="list-style-type:disc">Diploma in Multimedia Design</li></ul><ul id="14bdb297-f7f9-4d16-9524-c2eb96d87ec9" class="bulleted-list"><li style="list-style-type:disc">Diploma in Visual Communication</li></ul><ul id="04e93c07-14fe-45cf-827e-f05f5144c84f" class="bulleted-list"><li style="list-style-type:disc">Diploma in Business Administration</li></ul><ul id="d22881d0-27a9-4acb-940f-3cd52a5cf6d4" class="bulleted-list"><li style="list-style-type:disc">Diploma in Fashion Design</li></ul><ul id="017d13b6-4de1-470e-aac3-2f972f3c42af" class="bulleted-list"><li style="list-style-type:disc">Diploma in Tourism &amp; Hospitality Management</li></ul></li></ol><ol type="1" id="a15c1f39-a5b3-466b-a42b-1b67b1cabd73" class="numbered-list" start="10"><li><a href="http://www.dimensions.edu.sg/">Dimensions International College</a><ul id="810f2b9f-9dad-4ebb-aca7-1d153d86ef64" class="bulleted-list"><li style="list-style-type:disc">Diploma in Accounting &amp; Finance</li></ul><ul id="604a7254-1132-4447-827c-81b37d6e1604" class="bulleted-list"><li style="list-style-type:disc">Diploma in Business Administration</li></ul><ul id="a5d5a413-3f0c-4b0e-840c-8dfeb77cecd8" class="bulleted-list"><li style="list-style-type:disc">Diploma in Hospitality &amp; Tourism Management</li></ul><ul id="8fabe02f-672a-4000-8326-bc8f7eeec273" class="bulleted-list"><li style="list-style-type:disc">Diploma in Information Technology</li></ul><ul id="5169205c-616d-48fa-9e32-6cb46af7dfdc" class="bulleted-list"><li style="list-style-type:disc">Diploma in Mass Communication</li></ul><ul id="abe43767-7b3c-4b56-a36a-35432ce02a67" class="bulleted-list"><li style="list-style-type:disc">Diploma in Marketing</li></ul><ul id="a5f666be-e152-4258-a111-1d24bad90a12" class="bulleted-list"><li style="list-style-type:disc">Diploma in Retail Management</li></ul><ul id="16a1081d-7d6d-4793-81f5-e2833a224b68" class="bulleted-list"><li style="list-style-type:disc">Diploma in Event Management</li></ul></li></ol><ol type="1" id="72aef623-a47a-4879-afd8-9dc5a084ca49" class="numbered-list" start="11"><li><a href="https://www.stansfield.edu.sg/">Stansfield College</a><ul id="e8bb2202-3003-412e-9b1a-bc79b6859f53" class="bulleted-list"><li style="list-style-type:disc">Diploma in Business Administration</li></ul><ul id="84ca6ad4-ed56-445a-b68c-d1c3391cb40b" class="bulleted-list"><li style="list-style-type:disc">Diploma in International Business</li></ul><ul id="b3c35544-e2c7-4cea-ad65-4ea818b36ebd" class="bulleted-list"><li style="list-style-type:disc">Diploma in Marketing</li></ul><ul id="944199a7-3754-447a-9919-ec8f35e7c2c8" class="bulleted-list"><li style="list-style-type:disc">Diploma in Hospitality and Tourism Management</li></ul><ul id="fba48cae-b955-4349-b4e4-36ed84efb38e" class="bulleted-list"><li style="list-style-type:disc">Diploma in Information Technology</li></ul><ul id="70685fff-bc2a-4b2d-a63a-b049943267e5" class="bulleted-list"><li style="list-style-type:disc">Diploma in Web Development</li></ul><ul id="d3fbf229-1848-49de-bde8-f96b822caae0" class="bulleted-list"><li style="list-style-type:disc">Diploma in Cybersecurity</li></ul><ul id="002369c1-e7d8-4f76-8649-73de17cea7f6" class="bulleted-list"><li style="list-style-type:disc">Diploma in Early Childhood Education</li></ul></li></ol><p id="42cd310c-23da-4048-b0be-a79218dc04c5" class="">Please note that this is not an exhaustive list of private schools and courses in Singapore. There are many other private schools offering a wide range of programs. It is advisable to research and gather more specific information about each school and their programs of interest.</p><h3 id="1b21dfc3-b33e-488d-810d-1c1584a7e900" class="">Admission requirements</h3><p id="3a71783d-dfc4-4a4f-a32b-5fd6b27da9d5" class="">Here are the general admission requirements for the mentioned courses at private schools in Singapore:</p><ol type="1" id="04cc9a42-9134-4cac-80e6-f9ca0cc4a015" class="numbered-list" start="1"><li>Nanyang Academy of Fine Arts (NAFA)<ul id="8bd37c4e-e23d-41a9-b56e-91c1c2028598" class="bulleted-list"><li style="list-style-type:disc">GCE O-Level or equivalent qualification</li></ul></li></ol><ol type="1" id="6199dd5c-bb4a-4148-a47b-9982ab0c0ce1" class="numbered-list" start="2"><li>LASALLE College of the Arts<ul id="1d0c5210-6f0c-470e-8288-f6e7034ba181" class="bulleted-list"><li style="list-style-type:disc">GCE O-Level or equivalent qualification</li></ul></li></ol><ol type="1" id="2ba257ad-af73-4729-b3dd-cb2987807289" class="numbered-list" start="3"><li>PSB Academy<ul id="26a11b57-e3e8-4cf2-9d0d-7d0b59d4aa6f" class="bulleted-list"><li style="list-style-type:disc">GCE O-Level or equivalent qualification</li></ul></li></ol><ol type="1" id="f93f34e4-17d3-4102-b8d7-83df3926c43d" class="numbered-list" start="4"><li>MDIS (Management Development Institute of Singapore)<ul id="ba7ea21c-7f01-4e34-b8a1-0c2531bcae05" class="bulleted-list"><li style="list-style-type:disc">GCE O-Level or equivalent qualification</li></ul></li></ol><ol type="1" id="66292b61-e528-4e47-9f29-a19d4d70fadf" class="numbered-list" start="5"><li>SIM Global Education<ul id="864d74fd-5615-4754-a49c-8c81addf9142" class="bulleted-list"><li style="list-style-type:disc">GCE O-Level or equivalent qualification</li></ul></li></ol><ol type="1" id="724c324b-f496-4e16-937a-416f6bf59b61" class="numbered-list" start="6"><li>Kaplan Singapore<ul id="4f1bf6b5-0ddd-4ce1-be05-0a3237e239f7" class="bulleted-list"><li style="list-style-type:disc">GCE O-Level or equivalent qualification</li></ul></li></ol><ol type="1" id="6d1a526f-550e-44ad-85ac-268c4d922269" class="numbered-list" start="7"><li>Informatics Academy<ul id="c1f50478-ceb0-45a7-a35e-4b2d7950e1c7" class="bulleted-list"><li style="list-style-type:disc">GCE O-Level or equivalent qualification</li></ul></li></ol><ol type="1" id="ce61583f-2c9a-45b5-985b-905bb8b1de6a" class="numbered-list" start="8"><li>TMC Academy<ul id="4baa8d52-bc5a-4769-af9d-4e971c99c528" class="bulleted-list"><li style="list-style-type:disc">GCE O-Level or equivalent qualification</li></ul></li></ol><ol type="1" id="740c5af9-ddb5-4e65-9e83-9d834507eccd" class="numbered-list" start="9"><li>Raffles College of Higher Education<ul id="01dfc28d-ee4f-400c-b563-53250a9e9a00" class="bulleted-list"><li style="list-style-type:disc">GCE O-Level or equivalent qualification</li></ul></li></ol><ol type="1" id="6f65273d-6702-44bc-b0d9-fe620456de59" class="numbered-list" start="10"><li>Dimensions International College<ul id="867d93d1-7a4a-4c55-9386-d6da213d23bb" class="bulleted-list"><li style="list-style-type:disc">GCE O-Level or equivalent qualification</li></ul></li></ol><ol type="1" id="72276812-39f8-4802-a4dd-e57c25d2e1ee" class="numbered-list" start="11"><li>Stansfield College<ul id="11b8fba1-9b5d-4d66-b906-c6804a768f8f" class="bulleted-list"><li style="list-style-type:disc">GCE O-Level or equivalent qualification</li></ul></li></ol><p id="bbb01a4e-be76-47e3-bdab-53398827ded0" class="">Please note that these are general admission requirements, and specific courses may have additional requirements or prerequisites. It is advisable to visit the respective private school websites or contact the admissions office for detailed information on the admission requirements for the specific courses you are interested in.</p><p id="3d28bece-2980-4d98-9f8f-96f34b495a04" class="">Remember to review the specific admission requirements for each course and submit your application within the designated application period.</p><h2 id="9c2cea9e-3ceb-4e0a-92cc-60a2541dfda3" class="">List of scholarships available</h2><p id="9de7f290-bc34-4589-b6f8-39540d442fae" class="">Here is a list of scholarships available for the mentioned private schools in Singapore:</p><ol type="1" id="4999282b-b3d2-4de8-8798-9f19184328e9" class="numbered-list" start="1"><li>Nanyang Academy of Fine Arts (NAFA):<ul id="9370110d-a2e4-46e7-a16b-47e24356af6c" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.nafa.edu.sg/admissions/financial-matters/scholarships">NAFA Scholarships</a></li></ul></li></ol><ol type="1" id="7e872c98-76a8-4d9e-8142-42d7ebb27f4b" class="numbered-list" start="2"><li>LASALLE College of the Arts:<ul id="79e0e16e-0738-4ff6-b9af-90f4e8172818" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lasalle.edu.sg/admissions/financial-matters/scholarships">LASALLE Scholarships</a></li></ul></li></ol><ol type="1" id="3d43b8a7-c385-4a56-a5ad-c40bf16993ce" class="numbered-list" start="3"><li>PSB Academy:<ul id="e0c07ebb-2bc6-4746-83d0-1bc92f6ed252" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.psb-academy.edu.sg/admissions/scholarships">PSB Academy Scholarships</a></li></ul></li></ol><ol type="1" id="0cc843ad-e829-4271-b02e-75df86df3b45" class="numbered-list" start="4"><li>MDIS (Management Development Institute of Singapore):<ul id="e60ceded-c2ff-4ac2-afb3-13df8500b20e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.mdis.edu.sg/admissions/scholarships">MDIS Scholarships</a></li></ul></li></ol><ol type="1" id="15b69aea-f517-4985-99d6-4bda2d2bc617" class="numbered-list" start="5"><li>SIM Global Education:<ul id="a070fb67-6e10-40f1-bf5e-70ec3724ec1e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.simge.edu.sg/admissions/scholarships">SIM Global Education Scholarships</a></li></ul></li></ol><ol type="1" id="a4f28c3b-465e-4a78-8ce2-9c52c2bfc758" class="numbered-list" start="6"><li>Kaplan Singapore:<ul id="bfead3b7-3438-4a39-867a-9b5e866f0365" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.kaplan.com.sg/admissions/scholarships">Kaplan Scholarships</a></li></ul></li></ol><ol type="1" id="ffa9719d-b669-40dd-83ab-1ec025dae528" class="numbered-list" start="7"><li>Informatics Academy:<ul id="761a67b4-92f2-41c6-aa5a-44fa1de000bc" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.informatics.edu.sg/admissions/financial-assistance/scholarships">Informatics Academy Scholarships</a></li></ul></li></ol><ol type="1" id="6f51e6d5-35aa-484b-9e98-353883dd3692" class="numbered-list" start="8"><li>TMC Academy:<ul id="3c71cf94-f779-45b4-a642-b8d31486a948" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.tmc.edu.sg/admissions/scholarships">TMC Academy Scholarships</a></li></ul></li></ol><ol type="1" id="bd2f2186-8244-4e60-ab7e-be540e9d0446" class="numbered-list" start="9"><li>Raffles College of Higher Education:<ul id="2e59cada-10f5-496b-a4f8-d369eb05a55e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.raffles-college.edu.sg/admissions/scholarships">Raffles Scholarships</a></li></ul></li></ol><ol type="1" id="011b0047-0019-4742-9235-82ee4ad0f0e7" class="numbered-list" start="10"><li>Dimensions International College:<ul id="49fd6a02-b7f5-4def-a2d8-85caeb2dd5e8" class="bulleted-list"><li style="list-style-type:disc"><a href="http://www.dimensions.edu.sg/admissions/scholarships">Dimensions Scholarships</a></li></ul></li></ol><p id="381e9e75-9666-42e2-b558-9dd7be5d22a6" class="">Please note that eligibility criteria, application requirements, and deadlines may vary for each scholarship. It is advisable to visit the respective scholarship websites for detailed information and to check for any updates or changes in the application process.</p><p id="5eeffdb7-f9fa-48f7-beb6-f8a68eeac75e" class="">Remember to review the specific requirements and deadlines for each scholarship and submit your application within the designated application period.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
